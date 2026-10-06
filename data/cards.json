@@ -1,0 +1,1592 @@
+{
+  "situationOriginal": [
+    {
+      "id": "SO-01",
+      "prompt": "An older boy on the bus threatens to beat you up if you won't give him your lunch money. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-02",
+      "prompt": "The girl who sits across from you in math class keeps knocking your pencil off your desk. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-03",
+      "prompt": "You have the chicken pox on the day of your class party. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-04",
+      "prompt": "A kid walks up to you and pushes you for no apparent reason. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-05",
+      "prompt": "Your younger brother won't leave your belongings alone. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-06",
+      "prompt": "Your parents tell you unkind things about each other. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-07",
+      "prompt": "A friend borrows your new cassette tape and keeps forgetting to bring it back to you. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-08",
+      "prompt": "Your best friend is ignoring you and hanging around with someone else. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-09",
+      "prompt": "You are not invited to a close friend's party. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-10",
+      "prompt": "A friend calls you at the last minute to tell you he/she can't spend the night. You discover that he/she accepted another invitation. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-11",
+      "prompt": "Another student keeps saying mean things about your mother. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-12",
+      "prompt": "A boy calls you a name. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-13",
+      "prompt": "Your parents are fighting and you can't concentrate on your homework. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-14",
+      "prompt": "Your mother won't let you spend the night with your best friend because your room isn't clean. What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-15",
+      "prompt": "Your dad sees your report card and calls you \"stupid.\" What do you feel like doing? What do you decide to do?"
+    },
+    {
+      "id": "SO-16",
+      "prompt": "A girl tells you that a friend is spreading an ugly rumor about you. What do you feel like doing? What do you decide to do?"
+    }
+  ],
+  "situationModern": [
+    {
+      "id": "SM-01",
+      "prompt": "A teammate in an online video game starts spamming toxic insults at you after you make a mistake.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling angry and wanting to yell back or throw my controller.",
+        "Pretending I felt zero emotion and ignoring my true feelings.",
+        "Feeling like I am worthless and deserve to be insulted.",
+        "Feeling happy that my teammate is paying attention to me."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Mute the toxic player, stay focused on the game, and report them after the match.",
+        "Spam toxic insults back until the game ends.",
+        "Intentionally throw the match to ruin it for everyone.",
+        "Slam my controller on the desk and rage-quit immediately."
+      ],
+      "suggestions1": [
+        "Acknowledge that I feel angry and frustrated by their toxic behavior.",
+        "Notice my physical reaction, like my heart beating fast or jaw clenching.",
+        "Remind myself that it is completely natural to feel upset when disrespected."
+      ],
+      "suggestions2": [
+        "Take three slow, deep breaths to calm my body down.",
+        "Block or mute the user so I do not have to hear further insults.",
+        "Talk to a friend after the game to vent and reset my mood."
+      ]
+    },
+    {
+      "id": "SM-02",
+      "prompt": "You are assigned a group project at school, but your group members refuse to help and expect you to do all the work.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling stressed and frustrated, wanting to snap at them or quit.",
+        "Feeling thrilled to do everyone else's work for them.",
+        "Feeling guilty and assuming it is my fault they will not work.",
+        "Feeling completely emotionless because schoolwork does not matter."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Divide tasks clearly with the group, and talk to the teacher if they still refuse to contribute.",
+        "Do all the work in silence and secretly hate my group members.",
+        "Yell at my group in class and refuse to turn in anything.",
+        "Erase everyone's name from the project and ruin the final file."
+      ],
+      "suggestions1": [
+        "Recognize that I feel overwhelmed and unfairly burdened.",
+        "Admit to myself that I am angry about the lack of teamwork.",
+        "Identify that my stress comes from carrying an unfair responsibility."
+      ],
+      "suggestions2": [
+        "Politely remind my group members of their assigned tasks.",
+        "Ask the teacher privately for guidance on how to handle the situation.",
+        "Set clear deadlines for my group mates using an assertive tone."
+      ]
+    },
+    {
+      "id": "SM-03",
+      "prompt": "Your parents turn off the Wi-Fi and take your phone right in the middle of a live stream or game match you were watching.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling furious and wanting to scream or slam my bedroom door.",
+        "Feeling completely calm and unbothered immediately.",
+        "Feeling terrified that my entire social life is over.",
+        "Feeling excited that my screen time was cut off suddenly."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Take a moment to cool off, then ask my parents calmly why they turned it off and listen to their response.",
+        "Scream at my parents and stomp to my bedroom.",
+        "Secretly turn the Wi-Fi back on and take my phone back without permission.",
+        "Refuse to speak to my family for the rest of the week."
+      ],
+      "suggestions1": [
+        "Acknowledge my intense frustration at the sudden interruption.",
+        "Identify that I am feeling angry about losing access unexpectedly.",
+        "Allow myself to feel upset without immediately acting out."
+      ],
+      "suggestions2": [
+        "Step away and take a few deep breaths before speaking.",
+        "Ask respectfully if we can agree on set screen time rules for the future.",
+        "Switch to an offline relaxing activity until I am calm enough to talk."
+      ]
+    },
+    {
+      "id": "SM-04",
+      "prompt": "A substitute teacher gives you lunch detention for talking, even though it was actually the person sitting behind you.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling outraged by the injustice and wanting to yell at the teacher.",
+        "Feeling glad that I am getting punished for someone else's mistake.",
+        "Feeling indifferent because unfair things always happen.",
+        "Feeling like I should lie and blame five other innocent people."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Respectfully wait until after class to calmly explain the mix-up to the teacher.",
+        "Argue loudly in class and call the substitute unfair in front of everyone.",
+        "Turn around and punch the student who was actually talking.",
+        "Storm out of the classroom without permission."
+      ],
+      "suggestions1": [
+        "Acknowledge that I feel angry about being blamed unfairly.",
+        "Notice my sudden feeling of injustice and frustration.",
+        "Recognize that my strong emotional reaction comes from a desire for fairness."
+      ],
+      "suggestions2": [
+        "Write down a brief note explaining what happened and hand it to the teacher.",
+        "Ask my regular teacher for help resolving the detention note later.",
+        "Stay calm and use a respectful tone when explaining the situation privately."
+      ]
+    },
+    {
+      "id": "SM-05",
+      "prompt": "You find out your friends started a separate group chat without you and are making plans together.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling hurt and left out, wanting to confront them aggressively or block them all.",
+        "Feeling super happy that they are excluding me.",
+        "Feeling like I am completely unlikable and will never have friends.",
+        "Feeling no emotion at all because friends do not matter."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Talk to one close friend privately to express how I feel without attacking them.",
+        "Send angry, passive-aggressive messages in the main chat.",
+        "Spread mean rumors about everyone in that group chat.",
+        "Block all of them immediately without saying a word."
+      ],
+      "suggestions1": [
+        "Acknowledge my hurt feelings and sense of rejection.",
+        "Admit to myself that being excluded makes me feel sad and angry.",
+        "Identify that I value these friendships, which is why this situation stings."
+      ],
+      "suggestions2": [
+        "Focus on spending time with other friends who make me feel included.",
+        "Use a Power Talk to tell my friend: \"I felt left out when plans were made without me.\"",
+        "Engage in a favorite hobby to boost my mood before addressing the issue."
+      ]
+    },
+    {
+      "id": "SM-06",
+      "prompt": "Your sports coach benches you for the whole game, even though you practiced hard all week.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling disappointed and angry, wanting to throw my equipment or quit the team.",
+        "Feeling thrilled that I did not have to play in the game.",
+        "Feeling like I am the worst athlete on the team.",
+        "Feeling completely emotionless about sitting on the bench."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Support my teammates from the bench during the game, then ask the coach after practice how I can improve.",
+        "Cheer against my own team so they lose the match.",
+        "Throw my helmet or jersey on the ground and walk off the field.",
+        "Yell insults at the coach during the middle of the game."
+      ],
+      "suggestions1": [
+        "Acknowledge my deep disappointment about not getting playing time.",
+        "Notice that my anger comes from feeling my hard work was overlooked.",
+        "Validate that it is tough to sit out when I put in so much effort."
+      ],
+      "suggestions2": [
+        "Stay engaged on the sidelines by encouraging my teammates.",
+        "Request a private conversation with coach to ask what specific skills to focus on.",
+        "Channel my frustration into extra practice during the next session."
+      ]
+    },
+    {
+      "id": "SM-07",
+      "prompt": "Your younger sibling accidentally drops your phone or tablet and cracks the screen.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling furious and wanting to scream at them or break something of theirs.",
+        "Feeling joyful that my screen is smashed.",
+        "Feeling like my entire life is destroyed beyond repair.",
+        "Feeling nothing because electronic devices do not matter."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Take a deep breath to stay calm, check the damage, and inform a parent about the accident.",
+        "Push my sibling and smash their favorite toy.",
+        "Scream at my sibling until they start crying.",
+        "Hide the broken device and blame my sibling for stealing it."
+      ],
+      "suggestions1": [
+        "Acknowledge that I am angry about my damaged property.",
+        "Recognize the difference between an accidental mistake and intentional harm.",
+        "Allow myself to feel upset without taking physical revenge."
+      ],
+      "suggestions2": [
+        "Pause and count to 10 before reacting to my sibling.",
+        "Calmly explain to my sibling why they need to ask before touching my stuff.",
+        "Work with my parents to look into screen repair options."
+      ]
+    },
+    {
+      "id": "SM-08",
+      "prompt": "A group of classmates pressures you to skip class or vape behind the school building.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling anxious or pressured, wanting to give in just to fit in with them.",
+        "Feeling super excited to break rules and get into serious trouble.",
+        "Feeling like I must do whatever anyone asks me to do.",
+        "Feeling zero emotion or concern about future consequences."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Firmly say \"No thanks, not my thing,\" and walk away to class.",
+        "Give in to peer pressure so they will not make fun of me.",
+        "Yell at them, call them names, and start a physical fight.",
+        "Agree to go with them and lie to my teachers later."
+      ],
+      "suggestions1": [
+        "Acknowledge the uncomfortable feeling of peer pressure.",
+        "Recognize my fear of being left out or mocked by peers.",
+        "Validate my anxiety about standing up for my own personal choices."
+      ],
+      "suggestions2": [
+        "Use a clear, confident voice to say \"I am passing on that.\"",
+        "Make a quick excuse like \"I have to meet a teacher\" and walk away.",
+        "Find a trusted friend or peer group who respects my boundaries."
+      ]
+    },
+    {
+      "id": "SM-09",
+      "prompt": "Someone intentionally spoils the ending of a movie or video game you were really excited to see.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling annoyed and frustrated, wanting to ruin something for them in return.",
+        "Feeling happy that I do not have to watch or play it anymore.",
+        "Feeling completely heartbroken and depressed forever.",
+        "Feeling no reaction whatsoever to the spoiler."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Tell them calmly \"That was uncool, please do not spoil things for me,\" and change the subject.",
+        "Scream at them and ruin all of their favorite shows or games.",
+        "Start a physical fight with them on the spot.",
+        "Cry loudly and demand they pay me cash for spoiling it."
+      ],
+      "suggestions1": [
+        "Acknowledge my annoyance that my anticipation was ruined.",
+        "Recognize that I feel frustrated by their inconsiderate behavior.",
+        "Admit to myself that I am disappointed about the unexpected spoiler."
+      ],
+      "suggestions2": [
+        "Walk away from the conversation before my temper flares up.",
+        "Express my annoyance assertively using a Power Talk statement.",
+        "Focus on enjoying the parts of the game or movie that were not spoiled."
+      ]
+    },
+    {
+      "id": "SM-10",
+      "prompt": "You keep losing over and over again in a competitive video game and get extremely frustrated.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling enraged and wanting to smash my headset or rage-quit the game.",
+        "Feeling glad that I keep losing every single round.",
+        "Feeling like I should quit gaming forever and never speak to anyone.",
+        "Feeling totally relaxed while losing repeatedly."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Turn off the game or take a 15-minute break to cool down and stretch.",
+        "Throw my controller across the room into the wall.",
+        "Send hateful messages to the players who beat me in the match.",
+        "Scream at my family members when they ask me a question."
+      ],
+      "suggestions1": [
+        "Acknowledge that I am feeling tilted and angry.",
+        "Recognize the physical signs of my frustration building up inside.",
+        "Accept that losing repeatedly naturally triggers feelings of anger."
+      ],
+      "suggestions2": [
+        "Drink a glass of water and stretch away from the screen.",
+        "Switch to a non-competitive, relaxing single-player game.",
+        "Practice deep breathing exercises before queuing up for another match."
+      ]
+    },
+    {
+      "id": "SM-11",
+      "prompt": "You go to sit down at an open lunch table, and someone says, \"You can't sit here, we're saving this for someone else.\"",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling embarrassed and angry, wanting to knock their tray over or yell at them.",
+        "Feeling excited to be turned away from the table.",
+        "Feeling like nobody in the whole school likes or respects me.",
+        "Feeling completely emotionless about social situations."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Say \"Okay,\" and calmly move to another seat or table with welcoming classmates.",
+        "Dump my food onto their lap and cause a big scene.",
+        "Sit down anyway and force a confrontation with them.",
+        "Run to the bathroom and cry for the rest of the lunch period."
+      ],
+      "suggestions1": [
+        "Acknowledge the uncomfortable feeling of social embarrassment and rejection.",
+        "Recognize that feeling stung by rejection is a normal human emotion.",
+        "Identify my desire to feel included and respected by my peers."
+      ],
+      "suggestions2": [
+        "Look around for a friendly group or student sitting alone to join.",
+        "Keep my head high and walk calmly to a different seating spot.",
+        "Talk to a school counselor if table saving becomes an ongoing pattern of bullying."
+      ]
+    },
+    {
+      "id": "SM-12",
+      "prompt": "Your parents blame you and take away your privileges for a mess in the kitchen that your sibling made.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling furious at the unfairness, wanting to scream or tackle my sibling.",
+        "Feeling happy to take the blame for everything my sibling does wrong.",
+        "Feeling like I should make an even bigger mess to get back at everyone.",
+        "Feeling completely unbothered by losing my daily privileges."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Calmly explain what happened to my parents when everyone is calm, without screaming.",
+        "Scream at my parents, call them names, and slam my bedroom door.",
+        "Attack my sibling in their room to get revenge.",
+        "Steal back my grounded privileges in secret without telling anyone."
+      ],
+      "suggestions1": [
+        "Acknowledge my anger over being punished unfairly for someone else's actions.",
+        "Identify my frustration toward both my sibling and my parents.",
+        "Recognize that my strong anger stems from a desire for fairness and truth."
+      ],
+      "suggestions2": [
+        "Wait until my parents are in a calm mood before presenting the facts politely.",
+        "Encourage my sibling calmly to tell the truth to our parents.",
+        "Write down a calm, polite message explaining what really occurred."
+      ]
+    },
+    {
+      "id": "SM-13",
+      "prompt": "A classmate takes an unflattering picture of you without asking and posts it on social media.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling humiliated and angry, wanting to break their phone or post a worse photo of them.",
+        "Feeling glad that an embarrassing photo of me is visible online.",
+        "Feeling like my social life is completely ruined forever.",
+        "Feeling nothing because online photos do not matter at all."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Report the photo on the platform, ask them firmly to delete it, and inform a trusted adult or teacher.",
+        "Take an embarrassing photo of them and post it online for revenge.",
+        "Steal their phone and smash it on the floor.",
+        "Start a physical fight with them during class instruction."
+      ],
+      "suggestions1": [
+        "Acknowledge my intense embarrassment and invasion of personal privacy.",
+        "Validate that it is completely natural to feel angry when photographed without consent.",
+        "Recognize my immediate impulse to seek revenge due to hurt pride."
+      ],
+      "suggestions2": [
+        "Use reporting tools on the app to flag the unauthorized photo.",
+        "State firmly: \"I did not consent to that picture. Take it down now.\"",
+        "Document screenshot evidence and show a school administrator or parent."
+      ]
+    },
+    {
+      "id": "SM-14",
+      "prompt": "You lent a classmate $10 for snacks last week, and now they pretend they don't owe you anything.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling ripped off and angry, wanting to fight them or steal their belongings.",
+        "Feeling happy that I gave away $10 for free.",
+        "Feeling like I should offer them another $20.",
+        "Feeling completely indifferent about my money."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Remind them firmly of the date and agreement, and decide not to lend them money again.",
+        "Reach into their backpack and steal $10 from their wallet.",
+        "Threaten to beat them up after school unless they pay me back immediately.",
+        "Spread a rumor that they are a thief who steals from everyone."
+      ],
+      "suggestions1": [
+        "Acknowledge my frustration over broken trust and dishonesty.",
+        "Recognize that I feel taken advantage of by a classmate.",
+        "Identify my natural anger at losing my money."
+      ],
+      "suggestions2": [
+        "Show them a text message or proof of the original agreement.",
+        "Set a firm personal boundary to never lend money to this person again.",
+        "Ask a teacher or adult for advice if this is part of a larger pattern of bullying."
+      ]
+    },
+    {
+      "id": "SM-15",
+      "prompt": "Your parents set strict limits on your screen time and weekend curfew while all your friends have no rules.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling resentful and restricted, wanting to sneak out or argue bitterly.",
+        "Feeling thrilled that I have earlier curfews than everyone else in my group.",
+        "Feeling like my parents hate me and want me to have zero friends.",
+        "Feeling no emotion about my household rules."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Follow the rules for now, and schedule a calm discussion to negotiate compromises based on good behavior.",
+        "Sneak out of the house after curfew and lie about where I was.",
+        "Scream \"I hate you!\" at my parents and break household items.",
+        "Refuse to do any schoolwork or chores as a protest statement."
+      ],
+      "suggestions1": [
+        "Acknowledge my jealousy toward friends who have fewer restrictions.",
+        "Recognize my growing desire for more personal independence and trust.",
+        "Identify my frustration at feeling restricted compared to my peers."
+      ],
+      "suggestions2": [
+        "Demonstrate responsibility in daily chores to earn increased trust.",
+        "Propose a fair trial period for a slightly extended curfew or screen time limit.",
+        "Focus on enjoying offline activities when my screen time ends."
+      ]
+    },
+    {
+      "id": "SM-16",
+      "prompt": "You spent days building something in a game or creating an art project, and a classmate accidentally deletes or ruins it.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling devastated and furious, wanting to destroy their work in revenge.",
+        "Feeling happy that my days of hard work were erased.",
+        "Feeling like I am completely talentless and should never create anything again.",
+        "Feeling completely unaffected by losing my work."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Express my deep disappointment, take a break to cool off, and see if any work can be restored.",
+        "Immediately ruin their project or delete their digital files in return.",
+        "Scream insults at them and push them out of their chair.",
+        "Throw the project across the classroom and break school property."
+      ],
+      "suggestions1": [
+        "Acknowledge the heavy disappointment of lost effort and wasted time.",
+        "Recognize the sharp anger triggered by having my project ruined.",
+        "Validate that it hurts when hard work disappears, even if it was an accident."
+      ],
+      "suggestions2": [
+        "Step away from the project area for 10 minutes to cool off.",
+        "Tell the person firmly: \"I know it was an accident, but I am really upset right now.\"",
+        "Ask the teacher or a supervisor if there is a backup or undo option available."
+      ]
+    },
+    {
+      "id": "SM-17",
+      "prompt": "A teacher penalizes your grade for turning an assignment in late, but lets another favorite student turn theirs in late with no penalty.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling bitter and angry about double standards, wanting to call the teacher names.",
+        "Feeling joyful about receiving a lower grade on my assignment.",
+        "Feeling like giving up on school and stopping all effort entirely.",
+        "Feeling zero emotion about my academic grades."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Schedule a private meeting with the teacher to ask politely about the grading policy.",
+        "Yell \"You show favoritism!\" loudly in front of the whole class.",
+        "Refuse to complete any future assignments for that teacher's class.",
+        "Rip up my graded assignment paper and throw it at the teacher."
+      ],
+      "suggestions1": [
+        "Acknowledge my anger over perceived favoritism and unfair standards.",
+        "Recognize that my frustration is tied to wanting equal treatment.",
+        "Identify my disappointment about my grade reduction."
+      ],
+      "suggestions2": [
+        "Review the class syllabus rules on late work before speaking with the teacher.",
+        "Use a polite, respectful tone when asking for feedback on my grade.",
+        "Talk to a school counselor or parent if unfair grading practices persist."
+      ]
+    },
+    {
+      "id": "SM-18",
+      "prompt": "You text a friend a long message explaining how you feel, and they reply with just \"ok.\"",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling dismissed and annoyed, wanting to text back aggressive insults.",
+        "Feeling thrilled with the one-word response.",
+        "Feeling like this person completely hates me and wants nothing to do with me.",
+        "Feeling no emotion whatsoever about the conversation."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Wait until we can talk in person or on a call, rather than trying to discuss deep feelings over text.",
+        "Send 20 angry text messages berating them for their short reply.",
+        "Post a screenshot of their response online to publicly shame them.",
+        "Block their phone number forever without discussing it."
+      ],
+      "suggestions1": [
+        "Acknowledge feeling dismissed and undervalued in the moment.",
+        "Recognize my annoyance at the lack of effort in their reply text.",
+        "Identify that texting is often a poor medium for deep emotional conversations."
+      ],
+      "suggestions2": [
+        "Put my phone down for an hour to avoid sending a reactive, angry text.",
+        "Ask calmly in person: \"Hey, did you have time to read my full text yesterday?\"",
+        "Share deep feelings with friends who are better suited for active listening."
+      ]
+    },
+    {
+      "id": "SM-19",
+      "prompt": "You accidentally trip and drop your lunch tray in front of the entire cafeteria, and people start laughing.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling intense embarrassment and anger, wanting to yell at everyone or run away.",
+        "Feeling super proud that I spilled my food all over the floor.",
+        "Feeling like I can never show my face in school ever again.",
+        "Feeling totally emotionless about dropping my food tray."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Take a deep breath, laugh it off if possible, clean it up with custodian help, and get a replacement tray.",
+        "Start throwing remaining food items at the people who laughed.",
+        "Scream loud curse words at the entire cafeteria crowd.",
+        "Run completely out of the school building without telling anyone."
+      ],
+      "suggestions1": [
+        "Acknowledge the embarrassment and vulnerability of the public moment.",
+        "Recognize that feeling self-conscious when laughed at is completely normal.",
+        "Validate my sudden internal urge to hide or react defensively."
+      ],
+      "suggestions2": [
+        "Smile or shrug to show that I do not take the accident too seriously.",
+        "Focus on the physical action of cleaning up rather than looking at the crowd.",
+        "Remind myself that peers will forget about this minor accident by tomorrow."
+      ]
+    },
+    {
+      "id": "SM-20",
+      "prompt": "Your family makes you go on an all-weekend trip, forcing you to miss your best friend's birthday party.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling bitterly disappointed, wanting to ruin the family trip by sulking or complaining constantly.",
+        "Feeling glad that I am missing my best friend's birthday celebration.",
+        "Feeling like my friends will replace me and forget about me over one weekend.",
+        "Feeling zero emotion about missing out on social plans."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Express my sadness to my family, send my friend a nice gift message, and celebrate with them on a different day.",
+        "Scream at my parents during the entire car ride and refuse to eat meals.",
+        "Sneak off from the family trip and try to travel back home alone.",
+        "Blame my best friend for scheduling their party on the wrong day."
+      ],
+      "suggestions1": [
+        "Acknowledge my disappointment about missing a major social event.",
+        "Recognize my feeling of missing out (FOMO) and social sadness.",
+        "Validate that it is tough when family obligations conflict with personal plans."
+      ],
+      "suggestions2": [
+        "Plan a fun 1-on-1 birthday hangout with my friend for the following week.",
+        "Video call my friend for 5 minutes during the party to wish them happy birthday.",
+        "Try to make the best of the family trip while acknowledging my disappointment."
+      ]
+    },
+    {
+      "id": "SM-21",
+      "prompt": "You tell a close friend a secret in confidence, and by the next day, half the grade knows about it.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling betrayed and humiliated, wanting to expose their secrets or start a fight.",
+        "Feeling glad that everyone in school knows my private secret.",
+        "Feeling like I should never trust another human being for the rest of my life.",
+        "Feeling completely indifferent about my secret being shared."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Confront the friend privately using Power Talk to express my hurt, and re-evaluate trusting them with secrets.",
+        "Post their deepest personal secrets on social media for revenge.",
+        "Scream at them in the middle of the hallway and start a physical fight.",
+        "Deny everything with wild lies that end up making the situation worse."
+      ],
+      "suggestions1": [
+        "Acknowledge my deep sense of personal betrayal and emotional hurt.",
+        "Recognize my anger toward my friend for breaking my trust.",
+        "Identify my embarrassment that private information was leaked to peers."
+      ],
+      "suggestions2": [
+        "State clearly: \"I trusted you with that secret, and breaking my trust really hurt me.\"",
+        "Set a firm personal boundary to keep sensitive secrets to myself going forward.",
+        "Talk to a counselor or trusted adult about managing the school gossip."
+      ]
+    },
+    {
+      "id": "SM-22",
+      "prompt": "A friend pressures you to let them copy your homework right before class starts because they didn't do it.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling put on the spot and anxious, wanting to give in or yell at them.",
+        "Feeling super excited to get caught cheating together by the teacher.",
+        "Feeling like I owe everyone access to my hard work.",
+        "Feeling no emotion at all about academic integrity."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Say \"I'm not comfortable letting you copy my work, but I can help explain it to you later.\"",
+        "Hand over my completed assignment and risk getting a zero for cheating.",
+        "Yell \"You lazy parasite!\" loudly in front of the entire class.",
+        "Give them intentionally fake answers on purpose so they fail the assignment."
+      ],
+      "suggestions1": [
+        "Acknowledge the stress of being placed in an awkward, pressured position.",
+        "Recognize my fear of disappointing a friend versus my desire to follow rules.",
+        "Identify my resentment about someone taking credit for my hard work."
+      ],
+      "suggestions2": [
+        "Firmly state: \"Sorry, I don't share my completed homework assignments.\"",
+        "Offer to review the study material together before the next test instead.",
+        "Keep my finished homework stored securely in my binder out of view."
+      ]
+    },
+    {
+      "id": "SM-23",
+      "prompt": "Your sibling keeps making annoying noises or pestering you on purpose while you are trying to study for an important test.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling irritated and stressed, wanting to hit them or scream at them to shut up.",
+        "Feeling delighted by the loud background noise while trying to focus.",
+        "Feeling like giving up on studying completely and failing the test.",
+        "Feeling completely calm and unaffected by the noise."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Ask them once calmly to stop, and if they continue, move to a quiet room or ask a parent for help.",
+        "Tackle my sibling to the ground and hit them.",
+        "Blast loud music in their face to get revenge on them.",
+        "Break their favorite belongings while screaming at them."
+      ],
+      "suggestions1": [
+        "Acknowledge my growing annoyance and study-related stress.",
+        "Recognize that my sibling is trying to provoke an angry reaction from me.",
+        "Identify my need for a quiet, distraction-free environment to focus."
+      ],
+      "suggestions2": [
+        "Put on noise-canceling headphones or calm study music.",
+        "Move my study materials to the library, kitchen, or another quiet room.",
+        "Politely ask a parent: \"Can you help redirect my sibling so I can study?\""
+      ]
+    },
+    {
+      "id": "SM-24",
+      "prompt": "You ask a friend if you can try out their new game console or headset, and they shut you down rudely.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling offended and rejected, wanting to insult them or break their item.",
+        "Feeling super happy that they were harsh and rude to me.",
+        "Feeling like I am unworthy of having nice friends or belongings.",
+        "Feeling zero emotion about their response."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Say \"Alright, no big deal,\" and give them space without making a scene.",
+        "Grab the headset out of their hands forcefully to take a turn.",
+        "Curse at them and call them selfish in front of everyone nearby.",
+        "Knock the game console off the table onto the floor."
+      ],
+      "suggestions1": [
+        "Acknowledge my hurt feelings over their harsh and respectful tone.",
+        "Recognize that while they have a right to say no, their rudeness felt bad.",
+        "Identify my internal reaction as a mix of surprise and social rejection."
+      ],
+      "suggestions2": [
+        "Respect their boundary regarding their personal property.",
+        "Later, tell them calmly: \"You can say no without being harsh with me.\"",
+        "Shift my attention to playing something else or hanging out with other friends."
+      ]
+    },
+    {
+      "id": "SM-25",
+      "prompt": "You walk past a group of peers in the hallway and hear them whisper and laugh about your clothes.",
+      "question1": "What do you feel like doing?",
+      "choices1": [
+        "Feeling self-conscious and angry, wanting to curse at them or cry.",
+        "Feeling thrilled that people are making fun of my outfit.",
+        "Feeling like I need to throw away all of my clothes immediately.",
+        "Feeling completely immune to all social opinions and comments."
+      ],
+      "question2": "What do you decide to do?",
+      "choices2": [
+        "Keep my head high, keep walking, and remind myself that their opinions do not define my self-worth.",
+        "Confront the group and start a physical fight in the school hallway.",
+        "Shout mean insults about their personal appearance in response.",
+        "Hide in the restroom for the remainder of the school day."
+      ],
+      "suggestions1": [
+        "Acknowledge the sting of social judgment and insecurity.",
+        "Recognize my natural anger at their rude behavior.",
+        "Validate my feelings of being targeted or embarrassed in public."
+      ],
+      "suggestions2": [
+        "Focus on the compliments and support of my true friends instead.",
+        "Take slow, calm breaths as I walk past to stay grounded.",
+        "Talk to a trusted friend or family member later to vent my feelings."
+      ]
+    }
+  ],
+  "payoffOriginal": [
+    {
+      "id": "PO-01",
+      "prompt": "Your coach tells you to run laps for talking back. What do you do?",
+      "options": [
+        "Run the laps, then talk privately: \"When you called me out in front of everyone, I felt embarrassed. I need for you to speak to me privately next time.\"",
+        "Refuse to run, yell that it is unfair, and storm off the field.",
+        "Run the laps angrily while muttering, then quit the team silently."
+      ],
+      "teachingPoint": "A: Respects authority while assertively addressing concerns privately using Power Talk."
+    },
+    {
+      "id": "PO-02",
+      "prompt": "Your classmates tell on you for something that you didn't do. What do you do?",
+      "options": [
+        "Say calmly: \"I feel frustrated when you accuse me because I didn't do it. Please listen to my side.\"",
+        "Yell at your classmates, call them liars, and start an argument.",
+        "Stay quiet, accept punishment for something you didn't do, and feel miserable."
+      ],
+      "teachingPoint": "A: Communicates the truth calmly and assertively without escalating conflict."
+    },
+    {
+      "id": "PO-03",
+      "prompt": "A friend screams at you when you don't want to share your candy bar. What do you do?",
+      "options": [
+        "Say: \"I get mad when you scream at me because this is my snack. Please ask nicely next time.\"",
+        "Yell back at them and throw the candy bar at their face.",
+        "Give them the candy bar silently while feeling resentful inside."
+      ],
+      "teachingPoint": "A: Sets personal boundaries using Power Talk without losing self-control."
+    },
+    {
+      "id": "PO-04",
+      "prompt": "A friend tells you that she's not inviting you to her party Friday night. What do you do?",
+      "options": [
+        "Say: \"When you tell me I'm not invited, I feel left out. I need for you to be honest with me about why.\"",
+        "Yell that her party will be stupid anyway and tell everyone not to go.",
+        "Pretend you don't care, go home, and cry by yourself."
+      ],
+      "teachingPoint": "A: Expresses hurt feelings constructively without attacking the other person."
+    },
+    {
+      "id": "PO-05",
+      "prompt": "Another student is telling your best friend not to hang around with you. What do you do?",
+      "options": [
+        "Speak to them: \"I get mad when you tell my friend not to hang around with me because it's hurtful. Please stop.\"",
+        "Confront the student aggressively and threaten them.",
+        "Avoid both of them and assume you lost your best friend."
+      ],
+      "teachingPoint": "A: Addresses rumors directly using Power Talk rather than resorting to aggression."
+    },
+    {
+      "id": "PO-06",
+      "prompt": "A good friend tells your deepest secret to another friend. What do you do?",
+      "options": [
+        "Say: \"When you tell my secrets, I feel betrayed. I need for you to keep private things to yourself.\"",
+        "Tell an embarrassing secret about them to the entire class as revenge.",
+        "Ignore them completely and end the friendship without explaining why."
+      ],
+      "teachingPoint": "A: Addresses trust issues clearly rather than seeking harmful revenge."
+    },
+    {
+      "id": "PO-07",
+      "prompt": "The boy sitting behind you is constantly poking you in the back wanting to ask you questions. What do you do?",
+      "options": [
+        "Turn around: \"When you poke me, I feel distracted. I need for you to stop poking and raise your hand.\"",
+        "Grab his pencil, yell at him, and throw it across the room.",
+        "Ignore it, get increasingly frustrated, and fail to focus on your work."
+      ],
+      "teachingPoint": "A: Sets immediate classroom boundaries without causing a disruption."
+    },
+    {
+      "id": "PO-08",
+      "prompt": "Others are teasing you about your new haircut. What do you do?",
+      "options": [
+        "Say: \"I get mad when you tease me about my hair because it hurts. Please stop talking about it.\"",
+        "Make fun of their appearance in return and start an insult contest.",
+        "Put your hood up, hide your face, and feel terrible all day."
+      ],
+      "teachingPoint": "A: Stops teasing assertively without sinking to the level of the teasers."
+    },
+    {
+      "id": "PO-09",
+      "prompt": "The other team is cheating. What do you do?",
+      "options": [
+        "Pause the game: \"When you break the rules, I feel frustrated. I need for us to play fairly.\"",
+        "Accuse them of being cheaters, shove a player, and ruin the game.",
+        "Keep playing silently while knowing it's unfair and lose on purpose."
+      ],
+      "teachingPoint": "A: Addresses fairness constructively while keeping sportsmanship intact."
+    },
+    {
+      "id": "PO-10",
+      "prompt": "You get in trouble for coming home late. What do you do?",
+      "options": [
+        "Say: \"I'm sorry. When I lose track of time, I understand why you worry. I need to set an alarm next time.\"",
+        "Slam your door, scream at your parents, and argue that it's not a big deal.",
+        "Go to your room silently, pout, and refuse to speak to anyone for days."
+      ],
+      "teachingPoint": "A: Demonstrates accountability and proactive problem-solving."
+    },
+    {
+      "id": "PO-11",
+      "prompt": "The librarian tells you that you are making too much noise in the library. What do you do?",
+      "options": [
+        "Say: \"When I talk loudly, I realize it disrupts others. I need to lower my voice right away.\"",
+        "Argue that you weren't being loud and accuse the librarian of picking on you.",
+        "Roll your eyes, slump down in your chair, and stop working entirely."
+      ],
+      "teachingPoint": "A: Accepts feedback politely and corrects the behavior immediately."
+    },
+    {
+      "id": "PO-12",
+      "prompt": "Other kids call you an \"easy out\" during the ball game. What do you do?",
+      "options": [
+        "Say: \"I get mad when you call me names because it's unsportsmanlike. Please focus on the game.\"",
+        "Throw your bat down, insult them back, or refuse to leave the base.",
+        "Walk off the field in tears and quit playing for the rest of recess."
+      ],
+      "teachingPoint": "A: De-escalates trash-talk calmly while maintaining personal composure."
+    },
+    {
+      "id": "PO-13",
+      "prompt": "A classmate accidentally runs into you and knocks you down. What do you do?",
+      "options": [
+        "Get up and say: \"When you run into me, I feel startled. I need for you to watch where you go next time.\"",
+        "Push them down to get revenge and yell at them for being clumsy.",
+        "Stay on the ground, say nothing, and hold a grudge for the rest of the day."
+      ],
+      "teachingPoint": "A: Distinguishes between accidents and intentional actions calmly."
+    },
+    {
+      "id": "PO-14",
+      "prompt": "Your mother puts you on restriction for not doing the dishes or taking out the garbage. What do you do?",
+      "options": [
+        "Do the chores, then say: \"I understand why you're upset. I need to remember my chores so I don't lose privileges.\"",
+        "Yell at your mom, throw a fit, and refuse to do the chores at all.",
+        "Do the chores silently while slamming items around and sulking."
+      ],
+      "teachingPoint": "A: Takes ownership of personal responsibilities without escalating argument."
+    },
+    {
+      "id": "PO-15",
+      "prompt": "Another student cuts in front of you in the lunch line. What do you do?",
+      "options": [
+        "Say: \"I get mad when you cut in line because everyone has been waiting. Please go to the back.\"",
+        "Push them out of the way and scream at them to move.",
+        "Let them cut in front of you without saying a word and complain later."
+      ],
+      "teachingPoint": "A: Asserts your place in line firmly without resorting to physical conflict."
+    },
+    {
+      "id": "PO-16",
+      "prompt": "Your best friend tells you that you have been acting like a snob lately. What do you do?",
+      "options": [
+        "Say: \"When you say that, I feel surprised. I need for you to give me an example so I can understand.\"",
+        "Yell at them, tell them they are a bad friend, and walk away.",
+        "Ignore the comment, stop talking to them, and feel resentful."
+      ],
+      "teachingPoint": "A: Invites open communication and clarification to resolve friendship issues."
+    }
+  ],
+  "payoffModern": [
+    {
+      "id": "PM-01",
+      "prompt": "Someone leaves you out of a group chat with all your close friends. What do you do?",
+      "options": [
+        "Talk to a friend privately: \"When I see a group chat without me, I feel left out. I need for you to let me know if there's a reason.\"",
+        "Post public status updates calling everyone fake friends and starting drama.",
+        "Mute everyone, delete the app, and silently stop talking to all your friends."
+      ],
+      "teachingPoint": "A: Expresses feeling excluded constructively without turning it into public drama."
+    },
+    {
+      "id": "PM-02",
+      "prompt": "A classmate posts an embarrassing photo of you on social media without asking. What do you do?",
+      "options": [
+        "Send a private message: \"When you post pictures of me without asking, I feel uncomfortable. I need for you to take it down.\"",
+        "Post an even more embarrassing picture of them in revenge to humiliate them.",
+        "Ignore it while feeling miserable and hope people stop looking at it."
+      ],
+      "teachingPoint": "A: Sets boundaries on digital privacy assertively without retaliating."
+    },
+    {
+      "id": "PM-03",
+      "prompt": "A teammate intentionally throws or ruins an online multiplayer match you are playing. What do you do?",
+      "options": [
+        "Mute your mic and say after: \"When you throw the game, I feel frustrated. I need for us to play as a team.\"",
+        "Scream into your microphone, insult their skill, and rage-quit the game.",
+        "Keep playing quietly while getting furious, then rage-quit without saying a word."
+      ],
+      "teachingPoint": "A: Protects your composure and uses mute tools instead of feeding toxic behavior."
+    },
+    {
+      "id": "PM-04",
+      "prompt": "A friend ghosted you after you made plans to hang out over the weekend. What do you do?",
+      "options": [
+        "Message them: \"When you don't show up or reply, I feel disrespected. I need for you to tell me if plans change.\"",
+        "Spam their phone with 50 angry texts and block them on everything.",
+        "Pretend nothing happened and wait for them to contact you whenever they feel like it."
+      ],
+      "teachingPoint": "A: Addresses accountability and communication standards in a friendship directly."
+    },
+    {
+      "id": "PM-05",
+      "prompt": "A classmate takes credit for your section of a digital slide presentation. What do you do?",
+      "options": [
+        "Politely clarify in class: \"When you present my slides, I feel overlooked. I need to present the work I completed.\"",
+        "Interrupt loudly, call them a thief in front of the class, and demand the teacher punish them.",
+        "Let them take the grade for your work while feeling resentful toward them."
+      ],
+      "teachingPoint": "A: Reclaims credit for your work calmly and professionally."
+    },
+    {
+      "id": "PM-06",
+      "prompt": "A friend reads your private direct messages over your shoulder without permission. What do you do?",
+      "options": [
+        "Cover your screen: \"When you look at my phone, I feel like my privacy isn't respected. I need for you to ask first.\"",
+        "Snatch their phone out of their hand, start digging through their texts, and yell at them.",
+        "Tilt your phone away silently, feeling uncomfortable but saying nothing."
+      ],
+      "teachingPoint": "A: Establishes physical and digital boundaries firmly."
+    },
+    {
+      "id": "PM-07",
+      "prompt": "Someone removes you from a shared class project folder without telling you. What do you do?",
+      "options": [
+        "Ask the group: \"When I get removed from the folder, I feel confused. I need to stay in the folder so I can do my part.\"",
+        "Delete all shared files out of anger so no one can complete the project.",
+        "Assume they hate you, do no work, and take a failing grade silently."
+      ],
+      "teachingPoint": "A: Solves technical and social misunderstandings directly to protect your grade."
+    },
+    {
+      "id": "PM-08",
+      "prompt": "A friend spoils the ending of a new movie or game online after you asked them not to. What do you do?",
+      "options": [
+        "Say: \"When you spoil the ending, I feel disappointed because I asked you not to. Please keep spoilers to yourself.\"",
+        "Post angry comments spoiling things they care about and block them immediately.",
+        "Unfollow them silently and hold a grudge for weeks without explaining why."
+      ],
+      "teachingPoint": "A: Communicates boundaries clearly when someone disregards your simple requests."
+    },
+    {
+      "id": "PM-09",
+      "prompt": "Someone sends you an unkind comment or insult in an online game lobby. What do you do?",
+      "options": [
+        "Mute/report them, then say: \"When you use insults, I feel annoyed. I need to play in a positive lobby.\"",
+        "Type back nasty insults, start a flame war, and get yourself reported.",
+        "Leave the game crying and avoid playing your favorite game ever again."
+      ],
+      "teachingPoint": "A: Uses built-in moderation tools (mute/report) to maintain self-control."
+    },
+    {
+      "id": "PM-10",
+      "prompt": "Your parents activate screen-time limits on your phone right while you are texting a friend. What do you do?",
+      "options": [
+        "Talk to them in person: \"When my screen time turns off mid-text, I feel stressed. I need a 5-minute warning next time.\"",
+        "Slam your door, scream at your parents, and demand they unlock the phone.",
+        "Sulk in your room, refuse to eat dinner, and give everyone the silent treatment."
+      ],
+      "teachingPoint": "A: Negotiates household tech rules respectfully without escalating conflict."
+    },
+    {
+      "id": "PM-11",
+      "prompt": "A friend forwards a private voice note or text you sent them to someone else. What do you do?",
+      "options": [
+        "Say: \"When you forward my private messages, I feel betrayed. I need for what I share with you to stay private.\"",
+        "Forward their personal secrets to a giant group chat as payback.",
+        "Stop trusting them completely but act like everything is fine when you see them."
+      ],
+      "teachingPoint": "A: Addresses breached trust directly using Power Talk."
+    },
+    {
+      "id": "PM-12",
+      "prompt": "Others leave mean jokes in the comment section of a video or photo you posted. What do you do?",
+      "options": [
+        "Delete the comments, block the users, and tell a trusted adult if it continues.",
+        "Respond with harsh personal insults to every mean commenter to defend yourself.",
+        "Delete your entire account, go to bed upset, and refuse to talk to anyone."
+      ],
+      "teachingPoint": "A: Takes control of your digital space by removing toxic interactions."
+    },
+    {
+      "id": "PM-13",
+      "prompt": "A classmate copies your homework online and submits it right before you do. What do you do?",
+      "options": [
+        "Speak to the teacher: \"When my work is copied, I feel concerned about my grade. I need to clarify that this is my original work.\"",
+        "Confront the classmate in the hallway, shove them, and start a fight.",
+        "Do nothing and risk getting a zero for cheating alongside them."
+      ],
+      "teachingPoint": "A: Protects academic integrity through proper reporting channels."
+    },
+    {
+      "id": "PM-14",
+      "prompt": "Your gaming group replaces you with someone else for a weekend tournament. What do you do?",
+      "options": [
+        "Say to the team leader: \"When I get replaced without notice, I feel let down. I need to know why I was swapped out.\"",
+        "Spam their social pages with hate messages and ruin their live stream.",
+        "Quit the team discord server immediately and pretend you never cared about gaming."
+      ],
+      "teachingPoint": "A: Seeks direct clarity and feedback instead of reacting out of hurt pride."
+    },
+    {
+      "id": "PM-15",
+      "prompt": "Someone screenshots an embarrassing text you sent and shares it in a class channel. What do you do?",
+      "options": [
+        "Contact the moderator or teacher: \"When private texts are posted in class channels, I feel harassed. I need this removed.\"",
+        "Threaten the person who shared it and start an aggressive online feud.",
+        "Log off, refuse to go to school the next day, and hide in your room."
+      ],
+      "teachingPoint": "A: Uses appropriate authority figures to handle online harassment."
+    },
+    {
+      "id": "PM-16",
+      "prompt": "A friend takes your unlocked phone and posts a joke status on your profile without asking. What do you do?",
+      "options": [
+        "Delete the post and say: \"When you post from my account, I feel annoyed. I need for you to leave my phone alone.\"",
+        "Take their phone, throw it on the ground, or post something malicious on their profile.",
+        "Laugh along uncomfortably while secretly feeling angry and violated."
+      ],
+      "teachingPoint": "A: Sets firm personal boundaries regarding digital devices."
+    },
+    {
+      "id": "PM-17",
+      "prompt": "Classmates start recording a prank on you for social media without your permission. What do you do?",
+      "options": [
+        "Look at the camera calmly: \"When you film me without asking, I feel uncomfortable. I need you to stop recording now.\"",
+        "Smash their phone out of their hand, start a physical fight, and curse at them.",
+        "Duck your head, run away crying, and hide in the bathroom for the rest of recess."
+      ],
+      "teachingPoint": "A: Asserts your right to consent and privacy calmly on camera."
+    },
+    {
+      "id": "PM-18",
+      "prompt": "A friend promises to join your online gaming squad, but ditches you for a higher-ranked group. What do you do?",
+      "options": [
+        "Say: \"When you ditch our squad after promising, I feel disappointed. I need you to be reliable when we make plans.\"",
+        "Join their game session, disrupt their match, and call them names over game chat.",
+        "Play alone in silence while feeling bitter and refuse to invite them ever again."
+      ],
+      "teachingPoint": "A: Addresses reliability and respect in friendships directly."
+    },
+    {
+      "id": "PM-19",
+      "prompt": "Someone unfollows or blocks you online after a minor disagreement in class. What do you do?",
+      "options": [
+        "Talk to them at school: \"When you block me over a minor issue, I feel confused. I need for us to talk things out.\"",
+        "Create fake accounts to stalk their profile and leave angry messages on their posts.",
+        "Block them back on everything, tell people they are dead to you, and hold a lifelong grudge."
+      ],
+      "teachingPoint": "A: Prefers face-to-face communication over digital stonewalling."
+    },
+    {
+      "id": "PM-20",
+      "prompt": "A group project partner doesn't do any work on a shared presentation and expects you to cover. What do you do?",
+      "options": [
+        "Say: \"When you don't complete your slides, I feel overwhelmed. I need for you to finish your assigned part today.\"",
+        "Do all their work, but put insults about them on the final slide for the teacher to see.",
+        "Do all their work silently, let them get an 'A' for free, and complain to your parents later."
+      ],
+      "teachingPoint": "A: Holds group members accountable before project deadlines pass."
+    },
+    {
+      "id": "PM-21",
+      "prompt": "Someone spreads a false rumor about you on a school messaging server. What do you do?",
+      "options": [
+        "Address the server admin/teacher: \"When false rumors are posted here, I feel unsafe. I need this post removed.\"",
+        "Start spreading even worse lies about that person to ruin their reputation.",
+        "Delete your app, stay silent, and let everyone believe the lie."
+      ],
+      "teachingPoint": "A: Uses official reporting systems to deal with defamation effectively."
+    },
+    {
+      "id": "PM-22",
+      "prompt": "Your teacher confiscates your phone because a friend kept texting you during class. What do you do?",
+      "options": [
+        "Hand over the phone, then text your friend later: \"When you text during class, I get in trouble. Please wait until lunch.\"",
+        "Yell at the teacher, refuse to hand over your phone, and storm out of the classroom.",
+        "Give up the phone angrily, pout all day, and blame the teacher for being unfair."
+      ],
+      "teachingPoint": "A: Respects classroom rules while addressing the root cause with your friend."
+    },
+    {
+      "id": "PM-23",
+      "prompt": "A friend demands your account password or unlock code to prove you trust them. What do you do?",
+      "options": [
+        "Say: \"When you demand my passwords, I feel pressured. I need for you to trust me without having my account info.\"",
+        "Give them your password, but secretly log into their accounts to spy on them too.",
+        "Give them all your passwords out of fear they won't be your friend anymore."
+      ],
+      "teachingPoint": "A: Protects account security and personal independence in relationships."
+    },
+    {
+      "id": "PM-24",
+      "prompt": "Someone turns a picture of your face into a mean meme and sends it around. What do you do?",
+      "options": [
+        "Report the image: \"When my photo is turned into a meme, I feel disrespected. I need this image deleted immediately.\"",
+        "Make a meaner meme targeting their family members and blast it to everyone.",
+        "Pretend to laugh at it so people think you don't care, even though you are hurt inside."
+      ],
+      "teachingPoint": "A: Rejects cyberbullying assertively through proper channels without lowering your standards."
+    },
+    {
+      "id": "PM-25",
+      "prompt": "A friend gets angry and spam-calls you when you take an hour to reply to a text. What do you do?",
+      "options": [
+        "Say: \"When you spam-call me, I feel overwhelmed. I need you to understand I am not always at my phone.\"",
+        "Yell at them over the phone, call them needy, and block their number for a week.",
+        "Apologize repeatedly, feel guilty for having a life offline, and promise to reply in seconds next time."
+      ],
+      "teachingPoint": "A: Sets healthy boundaries around text response time and personal availability."
+    }
+  ],
+  "plusOriginal": [
+    {
+      "id": "XO-01",
+      "prompt": "You are sulking after getting in trouble.",
+      "effect": "Lose 2 points",
+      "points": -2
+    },
+    {
+      "id": "XO-02",
+      "prompt": "You are starting to get on someone's nerves.",
+      "effect": "Lose 1 point",
+      "points": -1
+    },
+    {
+      "id": "XO-03",
+      "prompt": "You talked to a trusted friend about your feelings.",
+      "effect": "Gain 4 points",
+      "points": 4
+    },
+    {
+      "id": "XO-04",
+      "prompt": "You pushed someone out of your way.",
+      "effect": "Lose 5 points",
+      "points": -5
+    },
+    {
+      "id": "XO-05",
+      "prompt": "You lost control and hit someone.",
+      "effect": "Lose 10 points",
+      "points": -10
+    },
+    {
+      "id": "XO-06",
+      "prompt": "You are giving someone the \"Silent Treatment\".",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XO-07",
+      "prompt": "You believed a rumor about a friend without first talking to your friend to check it out.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XO-08",
+      "prompt": "You plan how you will act differently next time you feel angry.",
+      "effect": "Gain 4 points",
+      "points": 4
+    },
+    {
+      "id": "XO-09",
+      "prompt": "You wrote about your feelings in a diary or journal.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XO-10",
+      "prompt": "You exercised for 20 minutes without stopping.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XO-11",
+      "prompt": "You used \"Power Talk\" instead of calling someone a name.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XO-12",
+      "prompt": "You took a warm bath or shower to relax.",
+      "effect": "Gain 2 points",
+      "points": 2
+    },
+    {
+      "id": "XO-13",
+      "prompt": "You calmed yourself by taking three deep breaths.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XO-14",
+      "prompt": "You used \"I\" messages to convey your feelings.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XO-15",
+      "prompt": "You threatened to beat someone up.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XO-16",
+      "prompt": "You stopped to think about your choices and the consequences.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XO-17",
+      "prompt": "You talked back to an adult.",
+      "effect": "Lose 5 points",
+      "points": -5
+    },
+    {
+      "id": "XO-18",
+      "prompt": "You rewarded yourself for using self-control by doing something fun.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XO-19",
+      "prompt": "You are spreading a rumor you heard at lunch.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XO-20",
+      "prompt": "You expressed your feelings to a friend.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XO-21",
+      "prompt": "You walked away when someone called you \"chicken.\"",
+      "effect": "Gain 7 points",
+      "points": 7
+    },
+    {
+      "id": "XO-22",
+      "prompt": "You called someone a name.",
+      "effect": "Lose 3 points",
+      "points": -3
+    },
+    {
+      "id": "XO-23",
+      "prompt": "You ignored someone who was talking about you and laughing.",
+      "effect": "Gain 4 points",
+      "points": 4
+    },
+    {
+      "id": "XO-24",
+      "prompt": "You are whining.",
+      "effect": "Lose 2 points",
+      "points": -2
+    },
+    {
+      "id": "XO-25",
+      "prompt": "You expressed your feelings by drawing.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XO-26",
+      "prompt": "You get back at another kid by giving him dirty looks across the room.",
+      "effect": "Lose 2 points",
+      "points": -2
+    },
+    {
+      "id": "XO-27",
+      "prompt": "You talked to an adult about your feelings.",
+      "effect": "Gain 5 points",
+      "points": 5
+    }
+  ],
+  "plusModern": [
+    {
+      "id": "XM-01",
+      "prompt": "You put your phone on \"Do Not Disturb\" to focus on your homework.",
+      "effect": "Gain 4 points",
+      "points": 4
+    },
+    {
+      "id": "XM-02",
+      "prompt": "You doomscrolled on social media until 2 AM and missed school.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XM-03",
+      "prompt": "You used a \"Power Talk\" message instead of typing an angry reply online.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XM-04",
+      "prompt": "You left a mean comment on a classmate's post.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XM-05",
+      "prompt": "You took a 10-minute break when you felt frustrated while online gaming.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XM-06",
+      "prompt": "You rage-quit an online game and screamed into your microphone.",
+      "effect": "Lose 5 points",
+      "points": -5
+    },
+    {
+      "id": "XM-07",
+      "prompt": "You supported a friend who was being excluded in a group chat.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XM-08",
+      "prompt": "You shared a private screenshot of a friend's text to make fun of them.",
+      "effect": "Lose 5 points",
+      "points": -5
+    },
+    {
+      "id": "XM-09",
+      "prompt": "You did a 5-minute breathing exercise when feeling anxious about a test.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XM-10",
+      "prompt": "You recorded someone without their consent to post a prank video.",
+      "effect": "Lose 5 points",
+      "points": -5
+    },
+    {
+      "id": "XM-11",
+      "prompt": "You politely asked a friend to take down an embarrassing photo of you.",
+      "effect": "Gain 4 points",
+      "points": 4
+    },
+    {
+      "id": "XM-12",
+      "prompt": "You ignored your family during dinner because you were texting.",
+      "effect": "Lose 2 points",
+      "points": -2
+    },
+    {
+      "id": "XM-13",
+      "prompt": "You reported a cyberbullying incident on a school platform to an adult.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XM-14",
+      "prompt": "You spread a false rumor on a group chat without verifying the truth.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XM-15",
+      "prompt": "You stepped away from a toxic voice chat instead of arguing back.",
+      "effect": "Gain 4 points",
+      "points": 4
+    },
+    {
+      "id": "XM-16",
+      "prompt": "You slammed your phone down when your parents set screen-time limits.",
+      "effect": "Lose 3 points",
+      "points": -3
+    },
+    {
+      "id": "XM-17",
+      "prompt": "You talked face-to-face with a friend to resolve a digital misunderstanding.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XM-18",
+      "prompt": "You excluded a classmate from a shared group project folder on purpose.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XM-19",
+      "prompt": "You set a daily app timer to manage your screen time responsibly.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XM-20",
+      "prompt": "You gave a friend the \"silent treatment\" online after a disagreement.",
+      "effect": "Lose 3 points",
+      "points": -3
+    },
+    {
+      "id": "XM-21",
+      "prompt": "You apologized to a peer after realizing you interrupted them in class.",
+      "effect": "Gain 4 points",
+      "points": 4
+    },
+    {
+      "id": "XM-22",
+      "prompt": "You bought in-game currency on a parent's card without asking permission.",
+      "effect": "Lose 10 points",
+      "points": -10
+    },
+    {
+      "id": "XM-23",
+      "prompt": "You listened to music or journaled to process feeling overwhelmed.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XM-24",
+      "prompt": "You made fun of someone's gaming skill in a public lobby.",
+      "effect": "Lose 4 points",
+      "points": -4
+    },
+    {
+      "id": "XM-25",
+      "prompt": "You chose not to forward a private voice note sent to you in confidence.",
+      "effect": "Gain 5 points",
+      "points": 5
+    },
+    {
+      "id": "XM-26",
+      "prompt": "You cheated on an online assignment by copying answers from another tab.",
+      "effect": "Lose 5 points",
+      "points": -5
+    },
+    {
+      "id": "XM-27",
+      "prompt": "You went for a walk outside to clear your head after an argument.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XM-28",
+      "prompt": "You sulked and refused to work in class after your phone was put away.",
+      "effect": "Lose 3 points",
+      "points": -3
+    },
+    {
+      "id": "XM-29",
+      "prompt": "You praised a classmate for their hard work on a group presentation.",
+      "effect": "Gain 3 points",
+      "points": 3
+    },
+    {
+      "id": "XM-30",
+      "prompt": "You blamed your teammates when your group project received a low grade.",
+      "effect": "Lose 3 points",
+      "points": -3
+    }
+  ],
+  "power": [
+    {
+      "id": "PT-01",
+      "title": "POWER TALK FORMULA",
+      "prompt": "I get mad when you _____ because _____ Please _____"
+    },
+    {
+      "id": "PT-02",
+      "title": "POWER TALK FORMULA",
+      "prompt": "When you _____ I feel _____ I need for you to _____"
+    },
+    {
+      "id": "PT-03",
+      "title": "POWER TALK FORMULA",
+      "prompt": "I get mad when you _____ because _____ Please _____"
+    },
+    {
+      "id": "PT-04",
+      "title": "POWER TALK FORMULA",
+      "prompt": "I get mad when you _____ because _____ Please _____"
+    },
+    {
+      "id": "PT-05",
+      "title": "POWER TALK FORMULA",
+      "prompt": "When you _____ I feel _____ I need for you to _____"
+    },
+    {
+      "id": "PT-06",
+      "title": "POWER TALK FORMULA",
+      "prompt": "I get mad when you _____ because _____ Please _____"
+    },
+    {
+      "id": "PT-07",
+      "title": "POWER TALK FORMULA",
+      "prompt": "When you _____ I feel _____ I need for you to _____"
+    },
+    {
+      "id": "PT-08",
+      "title": "POWER TALK FORMULA",
+      "prompt": "When you _____ I feel _____ I need for you to _____"
+    },
+    {
+      "id": "PT-09",
+      "title": "POWER TALK FORMULA",
+      "prompt": "When you _____ I feel _____ I need for you to _____"
+    },
+    {
+      "id": "PT-10",
+      "title": "POWER TALK FORMULA",
+      "prompt": "I get mad when you _____ because _____ Please _____"
+    },
+    {
+      "id": "PT-11",
+      "title": "POWER TALK FORMULA",
+      "prompt": "I get mad when you _____ because _____ Please _____"
+    },
+    {
+      "id": "PT-12",
+      "title": "POWER TALK FORMULA",
+      "prompt": "When you _____ I feel _____ I need for you to _____"
+    }
+  ]
+}

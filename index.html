@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <title>Self-Control Patrol</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="finaleOverlay" class="finale-overlay" hidden aria-live="polite" aria-label="Mission complete celebration">
+  <div class="finale-rays" aria-hidden="true"></div><div id="finaleParticles" class="finale-particles" aria-hidden="true"></div>
+  <div class="finale-core"><div class="finale-kicker">SELF-CONTROL PATROL</div><div id="finaleBadge" class="finale-badge">★</div><h1>MISSION <strong>COMPLETE!</strong></h1><p id="finaleWinner" class="finale-winner"></p><p class="finale-note">Game results show this mission's performance. They do not, by themselves, indicate educational mastery.</p><div id="finaleResults" class="finale-results"></div><div class="finale-actions"><button id="finaleExportBtn" class="secondary" type="button">Export session data</button><button id="finaleContinueBtn" class="primary" type="button">View Headquarters</button></div></div>
+</div>
+
+<div id="app">
+  <header class="topbar">
+    <button id="teacherBtn" class="header-button" type="button" aria-expanded="false" aria-controls="teacherDrawer" title="Teacher controls">☰ <span>Teacher</span></button>
+    <button id="instructionsBtn" class="header-button" type="button">Instructions</button>
+    <div class="brand"><span class="brand-mark">STOP</span><div><strong>Self-Control Patrol</strong><small>Classroom board game</small></div></div>
+    <div class="top-actions">
+      <span id="turnBadge" class="turn-badge">Ready to begin</span>
+      <button id="fullscreenBtn" class="icon-button" type="button" title="Full screen" aria-label="Full screen">⛶</button>
+    </div>
+  </header>
+  <main class="layout">
+    <section class="board-panel" aria-label="Game board">
+      <div id="boardStage" class="board-stage"><div id="boardLayer" class="board-layer">
+        <img src="assets/board.png" alt="The Self-Control Patrol board" draggable="false">
+        <svg id="boardOverlay" viewBox="0 0 1448 1086" role="img" aria-label="Interactive board with colored stop-sign pawns"></svg>
+      </div><div id="patrolCharacter" class="patrol-character" data-character="coach" data-mood="idle" aria-live="polite"><div class="character-art" aria-hidden="true"><span class="character-badge">★</span><span class="character-face">🦅</span></div><div class="character-bubble"><strong id="characterName">Coach Control</strong><span id="characterLine">Patrol ready!</span></div></div><div id="boardNotice" class="board-notice" aria-live="polite"></div></div>
+    </section>
+    <aside class="side-panel">
+      <div id="setupView" class="view">
+        <div class="section-heading"><span class="eyebrow">MISSION BRIEFING</span><h1>Get ready to patrol</h1><p>Play together on one screen. Add up to ten players.</p></div>
+        <div class="settings-grid"><label class="field">Class ID <input id="classId" maxlength="40" placeholder="e.g., 2026-5A"></label><label class="field">Class label <input id="classLabel" maxlength="60" placeholder="e.g., Grade 5 Group A"></label><label class="field">School year <input id="schoolYear" maxlength="20" placeholder="e.g., 2026–2027"></label><label class="field">Session notes / label <input id="sessionLabel" maxlength="60" placeholder="e.g., Friday group"></label></div>
+        <p class="helper">Use the same student code each session to follow progress across games. Names are optional; use aliases on a shared screen.</p>
+        <div class="setup-player-head"><h2>Players <span id="playerCountLabel">2 of 10</span></h2><button id="addPlayerBtn" class="secondary" type="button">+ Add player</button></div><div id="nameFields" class="name-fields"></div>
+        <div class="settings-grid">
+          <label class="field">Situation cards <select id="situationSet"><option value="original">Original</option><option value="modern">2.0</option><option value="both">Both</option></select></label>
+          <label class="field">Payoff cards <select id="payoffSet"><option value="original">Original</option><option value="modern">2.0</option><option value="both">Both</option></select></label>
+          <label class="field">+ / − cards <select id="plusSet"><option value="original">Original</option><option value="modern">2.0</option><option value="both">Both</option></select></label>
+          <label class="field">Game length <select id="gameLength"><option value="0">Exact-roll finish</option><option value="20">20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select></label>
+          <label class="field">Pawn movement <select id="movementSetup"><option value="auto">Automatic</option><option value="drag">Drag and drop</option><option value="tap">Tap glowing target</option></select></label>
+        </div>
+        <label class="toggle-row"><input id="multipleChoiceSetup" type="checkbox" checked><span>Show multiple-choice answers on eligible cards</span></label>
+        <label class="toggle-row"><input id="classroomSetup" type="checkbox" checked><span>Classroom Smartboard mode</span></label>
+        <label class="toggle-row"><input id="cardBackSetup" type="checkbox" checked><span>Show card back before the prompt</span></label>
+        <button id="startBtn" class="primary wide" type="button">Start briefing</button><button id="setupWalkthroughBtn" class="secondary wide" type="button">Show walkthrough</button><button id="setupIntroBtn" class="ghost wide" type="button">Replay opening</button><button id="resumeBtn" class="secondary wide" type="button" hidden>Resume saved game</button><button id="importBtn" class="ghost wide" type="button">Paste a game log to continue</button>
+        <p class="helper">Review the cards for your group before playing. The teacher awards open-ended responses.</p>
+      </div>
+      <div id="gameView" class="view" hidden>
+        <div class="status-line"><span id="phaseLabel" class="eyebrow">YOUR TURN</span><span id="sessionClock" class="clock"></span></div><h1 id="activeTitle" class="active-title"></h1>
+        <div id="playersList" class="players-list"></div><div id="actionPanel" class="action-panel"></div>
+        <div class="control-row"><button id="rollBtn" class="primary" type="button">Roll die</button><div id="die" class="die" aria-label="Die result">?</div><button id="endTurnBtn" class="secondary" type="button" hidden>Next player</button></div>
+        <div class="small-controls"><label class="field inline-field">Movement <select id="movementGame"><option value="auto">Automatic</option><option value="drag">Drag</option><option value="tap">Tap target</option></select></label></div>
+      </div>
+    </aside>
+  </main>
+  <aside id="teacherDrawer" class="teacher-drawer" hidden aria-label="Teacher control panel">
+    <div class="drawer-head"><h2>Teacher controls</h2><button id="closeTeacherBtn" class="icon-button" type="button" aria-label="Close teacher controls">×</button></div>
+    <div class="drawer-body"><label class="field">Player <select id="teacherPlayer"></select></label>
+      <div class="score-edit"><label class="field">Chip change <input id="chipAmount" type="number" min="-100" max="100" value="1"></label><button id="applyChipBtn" class="secondary" type="button">Apply</button></div>
+      <div id="teacherAwardPanel" class="teacher-award" hidden></div>
+      <div class="drawer-grid"><button id="pauseBtn" class="secondary" type="button">Pause game</button><button id="skipTurnBtn" class="secondary" type="button">Skip this turn</button><button id="passBtn" class="secondary" type="button">Pass current card</button><button id="rewindBtn" class="secondary" type="button">Undo Turn</button><button id="teacherUndoBtn" class="secondary" type="button">Undo last action</button><button id="teacherMuteBtn" class="secondary" type="button">Mute effects</button><button id="teacherSpeechBtn" class="secondary" type="button">Mute voice</button><button id="teacherReadBtn" class="secondary" type="button">Read card aloud</button><button id="stopVoiceBtn" class="secondary" type="button">Stop voice</button><button id="teacherLastCardBtn" class="secondary" type="button">Last card</button><button id="teacherSettingsBtn" class="secondary" type="button">Settings</button><button id="teacherWalkthroughBtn" class="secondary" type="button">Show walkthrough</button><button id="teacherIntroBtn" class="secondary" type="button">Replay opening</button><button id="teacherLogBtn" class="secondary" type="button">Game log</button><button id="exportBtn" class="primary" type="button">Export &amp; email data</button><button id="teacherFullscreenBtn" class="secondary" type="button">Full screen</button><button id="returnSetupBtn" class="danger" type="button">Return to setup</button></div>
+      <div class="observation-panel"><h3>Question observation</h3><label class="field">Question <select id="teacherResponse"></select></label><label class="field">Support <select id="teacherSupport"><option value="None">None</option><option value="Prompted">Prompted</option><option value="Read aloud">Read aloud</option><option value="Passed">Passed</option></select></label><label class="field">Teacher note <textarea id="teacherNote" maxlength="500" placeholder="Optional, brief observation"></textarea></label><button id="saveObservationBtn" class="secondary wide" type="button">Save observation</button></div>
+      <p class="helper">Close this panel while students take their turns.</p>
+    </div>
+  </aside>
+  <dialog id="cardDialog" class="card-dialog"><div id="cardContent"></div><div class="dialog-actions"><button id="magnifyBtn" class="ghost" type="button" title="Enlarge card text">⌕ Enlarge</button><button id="cardInstructionsBtn" class="ghost" type="button">Instructions</button><button id="readCardBtn" class="ghost" type="button">Read aloud</button><button id="closeCardBtn" class="primary" type="button">Back to game</button></div></dialog>
+  <dialog id="instructionsDialog" class="instructions-dialog"><h2>How to play Self-Control Patrol</h2><div id="instructionsContent"></div><div class="dialog-actions"><button id="closeInstructionsBtn" class="primary" type="button">Return to game</button></div></dialog>
+  <dialog id="confirmSetupDialog" class="settings-dialog"><h2>Return to setup?</h2><p>This ends the current game on this device and clears its autosave. Copy the game log or export data first if you need to continue later.</p><div class="dialog-actions"><button id="keepPlayingBtn" class="secondary" type="button">Keep playing</button><button id="confirmSetupBtn" class="danger" type="button">Return to setup</button></div></dialog>
+  <dialog id="suggestionsDialog" class="suggestions-dialog"><div id="suggestionsContent"></div><div class="dialog-actions"><button id="closeSuggestionsBtn" class="primary" type="button">Done</button></div></dialog>
+  <dialog id="settingsDialog" class="settings-dialog"><h2>Game settings</h2><label class="toggle-row"><input id="classroomMode" type="checkbox"><span>Classroom Smartboard mode</span></label><label class="toggle-row"><input id="effectsEnabled" type="checkbox" checked><span>Sound effects</span></label><label class="toggle-row"><input id="speechEnabled" type="checkbox" checked><span>Speech read-aloud</span></label><label class="toggle-row"><input id="musicEnabled" type="checkbox" checked><span>Patrol background music</span></label><label class="field">Effects volume <input id="volume" type="range" min="0" max="100" value="45"></label><label class="field">Speech volume <input id="speechVolume" type="range" min="0" max="100" value="90"></label><label class="field">Music volume <input id="musicVolume" type="range" min="0" max="100" value="16"></label><button id="quietPresetBtn" class="secondary wide" type="button">Apply quiet preset</button><label class="toggle-row"><input id="reducedMotion" type="checkbox"><span>Calmer animations</span></label><label class="toggle-row"><input id="cameraFollow" type="checkbox"><span>Follow pawn during movement</span></label><label class="toggle-row"><input id="cardBackSetting" type="checkbox"><span>Show card back before revealing</span></label><label class="toggle-row"><input id="multipleChoiceSetting" type="checkbox"><span>Show multiple-choice answers</span></label><p class="helper">Progress saves on this device after each action. Speech depends on the device's available voices.</p><div class="dialog-actions"><button id="newGameBtn" class="danger" type="button">New game</button><button id="closeSettingsBtn" class="primary" type="button">Done</button></div></dialog>
+  <dialog id="logDialog" class="log-dialog"><h2>Game log</h2><p class="helper">Copy this text to keep a portable save. The final section restores the complete game state.</p><textarea id="logText" readonly aria-label="Timestamped game log and save data"></textarea><div class="dialog-actions"><button id="copyLogBtn" class="secondary" type="button">Copy log</button><button id="closeLogBtn" class="primary" type="button">Done</button></div></dialog>
+  <dialog id="exportDialog" class="log-dialog"><h2>Export session data</h2><p id="exportSummary" class="helper"></p><p class="helper">Choose a Google Sheets tab, then copy or download its TSV. The email button opens an addressed draft for review and manual sending. Download and attach full TSV files if the email excerpt is too long.</p><label class="field">Email subject <input id="exportSubject" readonly></label><label class="field">Google Sheets tab <select id="exportTab"><option>Classes</option><option>Students</option><option>Sessions</option><option>Questions</option><option selected>Responses</option></select></label><label class="field">TSV data <textarea id="exportTsv" readonly aria-label="Selected tab in tab-separated format"></textarea></label><p id="exportNotice" class="helper"></p><div class="dialog-actions wrap"><button id="copyTsvBtn" class="secondary" type="button">Copy TSV</button><button id="downloadTsvBtn" class="secondary" type="button">Download selected TSV</button><button id="downloadActionsBtn" class="secondary" type="button">Download actions TSV</button><button id="emailDataBtn" class="primary" type="button">Open email draft</button><button id="closeExportBtn" class="ghost" type="button">Done</button></div><p class="helper"><a href="AI_SESSION_ANALYSIS_TEMPLATE.md" download>Download AI session analysis template</a></p></dialog>
+  <dialog id="importDialog" class="log-dialog"><h2>Continue from a game log</h2><p class="helper">Paste the complete copied log, including the GAME SAVE section.</p><textarea id="importText" aria-label="Paste a saved game log"></textarea><div class="dialog-actions"><button id="cancelImportBtn" class="ghost" type="button">Cancel</button><button id="loadLogBtn" class="primary" type="button">Load game</button></div></dialog>
+
+
+  <div id="introOverlay" class="intro-overlay" hidden aria-label="Self-Control Patrol opening sequence">
+    <div class="intro-grid" aria-hidden="true"></div>
+    <div class="intro-scan" aria-hidden="true"></div>
+    <div class="intro-core">
+      <div class="intro-signal" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="intro-badge" aria-hidden="true"><div class="intro-badge-ring"></div><div class="intro-badge-shield">STOP</div></div>
+      <div class="intro-copy">
+        <span class="intro-kicker">PATROL HEADQUARTERS</span>
+        <h1>SELF-CONTROL <strong>PATROL</strong></h1>
+        <p>THINK <b>•</b> PAUSE <b>•</b> CHOOSE <b>•</b> SUCCEED</p>
+        <div id="introStatus" class="intro-status">Establishing patrol link…</div>
+      </div>
+      <button id="introStartBtn" class="primary intro-start" type="button">START MISSION</button>
+    </div>
+    <button id="introSkipBtn" class="intro-skip" type="button">Skip intro</button>
+  </div>
+  <div id="turnSpotlight" class="turn-spotlight" hidden aria-live="assertive">
+    <div class="spotlight-beam" aria-hidden="true"></div>
+    <div class="spotlight-card">
+      <span class="spotlight-kicker">SELF-CONTROL PATROL</span>
+      <span class="spotlight-pawn" id="turnSpotlightPawn" aria-hidden="true">★</span>
+      <strong id="turnSpotlightName">YOUR TURN!</strong>
+      <span id="turnSpotlightCue">Ready for the next mission?</span>
+    </div>
+  </div>
+  <dialog id="walkthroughDialog" class="walkthrough-dialog"><span class="eyebrow">QUICK TOUR</span><h2 id="walkthroughTitle"></h2><div id="walkthroughBody" class="walkthrough-body"></div><div class="walkthrough-progress" id="walkthroughProgress"></div><div class="dialog-actions"><button id="walkthroughBackBtn" class="ghost" type="button">Back</button><button id="walkthroughSkipBtn" class="secondary" type="button">Skip walkthrough</button><button id="walkthroughNextBtn" class="primary" type="button">Next</button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="data/cards.js"></script><script src="data/spaces.js"></script><script src="game.js"></script>
+</body>
+</html>
