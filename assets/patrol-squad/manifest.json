@@ -1,0 +1,3726 @@
+{
+ "version": 1,
+ "board": {
+  "width": 1448,
+  "height": 1086
+ },
+ "closeup": {
+  "note": "T-shaped close-up: speech bubble over the title logo, character card in the open channel below it. Covers decorative art only; no playable space, pawn, card or control.",
+  "x": 300,
+  "y": 136,
+  "w": 425,
+  "h": 396,
+  "bubble": {
+   "x": 300,
+   "y": 136,
+   "w": 425,
+   "h": 116
+  },
+  "card": {
+   "x": 448,
+   "y": 240,
+   "w": 207,
+   "h": 292
+  }
+ },
+ "states": [
+  "idle",
+  "attention",
+  "greeting",
+  "thinking",
+  "speaking",
+  "encouraging",
+  "coaching",
+  "retry",
+  "celebrating",
+  "missionAlert",
+  "missionComplete"
+ ],
+ "events": {
+  "welcome": {
+   "char": "coach",
+   "state": "greeting",
+   "line": "welcome",
+   "priority": 70
+  },
+  "turn": {
+   "char": "coach",
+   "state": "attention",
+   "line": "turn",
+   "priority": 40,
+   "closeup": false
+  },
+  "situation": {
+   "char": "pause",
+   "state": "missionAlert",
+   "line": "situation",
+   "priority": 60
+  },
+  "payoff": {
+   "char": "think",
+   "state": "thinking",
+   "line": "payoff",
+   "priority": 60
+  },
+  "power": {
+   "char": "coach",
+   "state": "coaching",
+   "line": "power",
+   "priority": 60
+  },
+  "plus": {
+   "char": "focus",
+   "state": "attention",
+   "line": "plus",
+   "priority": 52
+  },
+  "plusGain": {
+   "char": "focus",
+   "state": "celebrating",
+   "line": "plusGain",
+   "priority": 58
+  },
+  "plusLoss": {
+   "char": "calm",
+   "state": "coaching",
+   "line": "plusLoss",
+   "priority": 58
+  },
+  "question": {
+   "char": "think",
+   "state": "thinking",
+   "line": "question",
+   "priority": 55
+  },
+  "firstTry": {
+   "char": "think",
+   "state": "celebrating",
+   "line": "firstTry",
+   "priority": 80
+  },
+  "retry": {
+   "char": "flex",
+   "state": "retry",
+   "line": "retry",
+   "priority": 80
+  },
+  "recovery": {
+   "char": "flex",
+   "state": "celebrating",
+   "line": "recovery",
+   "priority": 80
+  },
+  "incorrect": {
+   "char": "calm",
+   "state": "coaching",
+   "line": "incorrect",
+   "priority": 80
+  },
+  "teaching": {
+   "char": "think",
+   "state": "speaking",
+   "line": "teaching",
+   "priority": 45,
+   "closeup": false
+  },
+  "reward": {
+   "char": "focus",
+   "state": "encouraging",
+   "line": "reward",
+   "priority": 65
+  },
+  "persist": {
+   "char": "focus",
+   "state": "encouraging",
+   "line": "persist",
+   "priority": 66
+  },
+  "reflection": {
+   "char": "calm",
+   "state": "encouraging",
+   "line": "reflection",
+   "priority": 60
+  },
+  "cue": {
+   "char": "calm",
+   "state": "coaching",
+   "line": "cue",
+   "priority": 55
+  },
+  "info": {
+   "char": "calm",
+   "state": "speaking",
+   "line": "info",
+   "priority": 55
+  },
+  "social": {
+   "char": "focus",
+   "state": "speaking",
+   "line": "social",
+   "priority": 55
+  },
+  "encounter": {
+   "char": "pause",
+   "state": "coaching",
+   "line": "encounter",
+   "priority": 55
+  },
+  "charades": {
+   "char": "flex",
+   "state": "encouraging",
+   "line": "charades",
+   "priority": 55
+  },
+  "free": {
+   "char": "coach",
+   "state": "celebrating",
+   "line": "free",
+   "priority": 55
+  },
+  "detour": {
+   "char": "calm",
+   "state": "coaching",
+   "line": "detour",
+   "priority": 55
+  },
+  "exact": {
+   "char": "flex",
+   "state": "encouraging",
+   "line": "exact",
+   "priority": 50
+  },
+  "timer": {
+   "char": "focus",
+   "state": "attention",
+   "line": "timer",
+   "priority": 35
+  },
+  "timeUp": {
+   "char": "focus",
+   "state": "encouraging",
+   "line": "timeUp",
+   "priority": 45
+  },
+  "finale": {
+   "char": "*",
+   "state": "missionComplete",
+   "line": "finale",
+   "priority": 100
+  }
+ },
+ "characters": {
+  "coach": {
+   "key": "coach",
+   "id": "coach-control",
+   "name": "Coach Control",
+   "role": "Team Leader and Mission Guide",
+   "personality": "Confident, motivational, energetic, charismatic, supportive",
+   "visualIdentity": "Royal blue and gold uniform, whistle, headset, leadership insignia",
+   "motionProfile": "energetic",
+   "accent": "#3c7bff",
+   "accent2": "#ffc94e",
+   "voice": {
+    "pitch": 1.0,
+    "rate": 1.02
+   },
+   "defaultIdlePose": "thumbs-up",
+   "board": {
+    "x": 467,
+    "baseline": 545,
+    "height": 170,
+    "unit": 170.0,
+    "idle": [
+     "thumbs-up"
+    ],
+    "alternates": [],
+    "safePoses": [
+     "thinking",
+     "thumbs-up"
+    ],
+    "statePose": {
+     "idle": "thumbs-up",
+     "attention": "thumbs-up",
+     "greeting": "thumbs-up",
+     "thinking": "thumbs-up",
+     "speaking": "thumbs-up",
+     "encouraging": "thumbs-up",
+     "coaching": "thumbs-up",
+     "retry": "thumbs-up",
+     "celebrating": "thumbs-up",
+     "missionAlert": "thumbs-up",
+     "missionComplete": "thumbs-up"
+    }
+   },
+   "states": {
+    "idle": {
+     "poses": [
+      [
+       "thumbs-up",
+       0
+      ]
+     ],
+     "badge": [
+      "smile"
+     ],
+     "motion": "breathe"
+    },
+    "attention": {
+     "poses": [
+      [
+       "point",
+       0
+      ]
+     ],
+     "badge": [
+      "talk",
+      "smile"
+     ],
+     "motion": "pop"
+    },
+    "greeting": {
+     "poses": [
+      [
+       "wave",
+       0
+      ],
+      [
+       "cheer",
+       1300
+      ]
+     ],
+     "badge": [
+      "talk-wide",
+      "smile"
+     ],
+     "motion": "wave",
+     "prop": [
+      "whistle",
+      "tweet"
+     ]
+    },
+    "thinking": {
+     "poses": [
+      [
+       "thinking",
+       0
+      ]
+     ],
+     "badge": [
+      "skeptical"
+     ],
+     "motion": "tilt"
+    },
+    "speaking": {
+     "poses": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1100
+      ]
+     ],
+     "badge": [
+      "talk",
+      "calm-smile"
+     ],
+     "motion": "talk"
+    },
+    "encouraging": {
+     "poses": [
+      [
+       "thumbs-up",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "smile"
+     ],
+     "motion": "nod"
+    },
+    "coaching": {
+     "poses": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1200
+      ]
+     ],
+     "badge": [
+      "talk",
+      "calm-smile"
+     ],
+     "motion": "talk",
+     "prop": [
+      "clipboard",
+      "check"
+     ]
+    },
+    "retry": {
+     "poses": [
+      [
+       "thumbs-up",
+       0
+      ]
+     ],
+     "badge": [
+      "smile",
+      "calm-smile"
+     ],
+     "motion": "nod"
+    },
+    "celebrating": {
+     "poses": [
+      [
+       "cheer",
+       0
+      ],
+      [
+       "wave",
+       900
+      ],
+      [
+       "cheer",
+       1700
+      ]
+     ],
+     "badge": [
+      "laugh",
+      "grin"
+     ],
+     "motion": "jump"
+    },
+    "missionAlert": {
+     "poses": [
+      [
+       "point",
+       0
+      ]
+     ],
+     "badge": [
+      "talk-wide",
+      "talk"
+     ],
+     "motion": "pop",
+     "prop": [
+      "whistle",
+      "tweet"
+     ]
+    },
+    "missionComplete": {
+     "poses": [
+      [
+       "cheer",
+       0
+      ],
+      [
+       "wave",
+       1000
+      ]
+     ],
+     "badge": [
+      "laugh",
+      "grin"
+     ],
+     "motion": "jump"
+    }
+   },
+   "lines": {
+    "welcome": [
+     "Welcome to Patrol Headquarters! Let’s hear the briefing first.",
+     "Patrol Squad, welcome! Listen to the mission briefing."
+    ],
+    "turn": [
+     "{name}, you’re up!",
+     "Patrol Squad — {name} is on patrol!"
+    ],
+    "power": [
+     "Power Talk! Speak up — calm and strong.",
+     "Use your Power Talk formula!"
+    ],
+    "free": [
+     "Self-Control FREE turn! Roll again!",
+     "Bonus patrol turn — nice!"
+    ],
+    "finale": [
+     "Mission complete! Great teamwork, Patrol Squad!"
+    ],
+    "idle": [
+     "Patrol ready!"
+    ]
+   },
+   "poses": {
+    "thumbs-up": {
+     "src": "assets/patrol-squad/coach-control/poses/coach-control-thumbs-up.png",
+     "display": "assets/patrol-squad/coach-control/poses/coach-control-thumbs-up@2x.webp",
+     "w": 76,
+     "h": 166,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "coach_000"
+    },
+    "wave": {
+     "src": "assets/patrol-squad/coach-control/poses/coach-control-wave.png",
+     "display": "assets/patrol-squad/coach-control/poses/coach-control-wave@2x.webp",
+     "w": 66,
+     "h": 119,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_001"
+    },
+    "point": {
+     "src": "assets/patrol-squad/coach-control/poses/coach-control-point.png",
+     "display": "assets/patrol-squad/coach-control/poses/coach-control-point@2x.webp",
+     "w": 83,
+     "h": 119,
+     "heightFactor": 0.96,
+     "family": "m",
+     "sourceCut": "master_002"
+    },
+    "explain": {
+     "src": "assets/patrol-squad/coach-control/poses/coach-control-explain.png",
+     "display": "assets/patrol-squad/coach-control/poses/coach-control-explain@2x.webp",
+     "w": 72,
+     "h": 119,
+     "heightFactor": 0.96,
+     "family": "m",
+     "sourceCut": "master_003"
+    },
+    "cheer": {
+     "src": "assets/patrol-squad/coach-control/poses/coach-control-cheer.png",
+     "display": "assets/patrol-squad/coach-control/poses/coach-control-cheer@2x.webp",
+     "w": 94,
+     "h": 120,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_005"
+    },
+    "thinking": {
+     "src": "assets/patrol-squad/coach-control/poses/coach-control-thinking.png",
+     "display": "assets/patrol-squad/coach-control/poses/coach-control-thinking@2x.webp",
+     "w": 50,
+     "h": 117,
+     "heightFactor": 0.95,
+     "family": "m",
+     "sourceCut": "master_007"
+    },
+    "power-stance": {
+     "src": "assets/patrol-squad/coach-control/poses/coach-control-power-stance.png",
+     "display": "assets/patrol-squad/coach-control/poses/coach-control-power-stance@2x.webp",
+     "w": 82,
+     "h": 107,
+     "heightFactor": 0.74,
+     "family": "c",
+     "sourceCut": "coach_001"
+    }
+   },
+   "expressions": {
+    "smile": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-smile.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-smile@2x.webp",
+     "sourceCut": "coach_002"
+    },
+    "calm-smile": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-calm-smile.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-calm-smile@2x.webp",
+     "sourceCut": "coach_003"
+    },
+    "grin": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-grin.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-grin@2x.webp",
+     "sourceCut": "coach_004"
+    },
+    "talk": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-talk.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-talk@2x.webp",
+     "sourceCut": "coach_005"
+    },
+    "laugh": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-laugh.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-laugh@2x.webp",
+     "sourceCut": "coach_006"
+    },
+    "talk-wide": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-talk-wide.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-talk-wide@2x.webp",
+     "sourceCut": "coach_007"
+    },
+    "skeptical": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-skeptical.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-skeptical@2x.webp",
+     "sourceCut": "master_013"
+    },
+    "headset-whistle": {
+     "src": "assets/patrol-squad/coach-control/expressions/coach-control-headset-whistle.png",
+     "display": "assets/patrol-squad/coach-control/expressions/coach-control-headset-whistle@2x.webp",
+     "sourceCut": "coach_016"
+    }
+   },
+   "accessories": {
+    "headset": {
+     "src": "assets/patrol-squad/coach-control/accessories/coach-control-headset.png",
+     "display": "assets/patrol-squad/coach-control/accessories/coach-control-headset@2x.webp",
+     "sourceCut": "coach_013"
+    },
+    "clipboard": {
+     "src": "assets/patrol-squad/coach-control/accessories/coach-control-clipboard.png",
+     "display": "assets/patrol-squad/coach-control/accessories/coach-control-clipboard@2x.webp",
+     "sourceCut": "coach_033"
+    },
+    "clipboard-angled": {
+     "src": "assets/patrol-squad/coach-control/accessories/coach-control-clipboard-angled.png",
+     "display": "assets/patrol-squad/coach-control/accessories/coach-control-clipboard-angled@2x.webp",
+     "sourceCut": "coach_031"
+    },
+    "whistle": {
+     "src": "assets/patrol-squad/coach-control/accessories/coach-control-whistle.png",
+     "display": "assets/patrol-squad/coach-control/accessories/coach-control-whistle@2x.webp",
+     "sourceCut": "coach_016"
+    },
+    "whistle-small": {
+     "src": "assets/patrol-squad/coach-control/accessories/coach-control-whistle-small.png",
+     "display": "assets/patrol-squad/coach-control/accessories/coach-control-whistle-small@2x.webp",
+     "sourceCut": "master_025"
+    },
+    "lanyard-ring": {
+     "src": "assets/patrol-squad/coach-control/accessories/coach-control-lanyard-ring.png",
+     "display": "assets/patrol-squad/coach-control/accessories/coach-control-lanyard-ring@2x.webp",
+     "sourceCut": "coach_035"
+    },
+    "whistle-b": {
+     "src": "assets/patrol-squad/coach-control/accessories/coach-control-whistle-b.png",
+     "display": "assets/patrol-squad/coach-control/accessories/coach-control-whistle-b@2x.webp",
+     "sourceCut": "master_034"
+    }
+   },
+   "rig": {
+    "torso": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-torso.png",
+     "w": 51,
+     "h": 47,
+     "sourceCut": "master_026"
+    },
+    "torso-alt": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-torso-alt.png",
+     "w": 44,
+     "h": 48,
+     "sourceCut": "master_024"
+    },
+    "jacket": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-jacket.png",
+     "w": 59,
+     "h": 55,
+     "sourceCut": "coach_012"
+    },
+    "vest-belt": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-vest-belt.png",
+     "w": 44,
+     "h": 75,
+     "sourceCut": "coach_014"
+    },
+    "torso-side": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-torso-side.png",
+     "w": 26,
+     "h": 53,
+     "sourceCut": "coach_015"
+    },
+    "legs-standing": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-legs-standing.png",
+     "w": 47,
+     "h": 69,
+     "sourceCut": "master_028"
+    },
+    "legs-wide": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-legs-wide.png",
+     "w": 39,
+     "h": 67,
+     "sourceCut": "master_027"
+    },
+    "leg-a": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-leg-a.png",
+     "w": 39,
+     "h": 60,
+     "sourceCut": "master_029"
+    },
+    "leg-b": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-leg-b.png",
+     "w": 36,
+     "h": 71,
+     "sourceCut": "master_030"
+    },
+    "shin-shoe": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-shin-shoe.png",
+     "w": 28,
+     "h": 53,
+     "sourceCut": "master_032"
+    },
+    "leg-bent": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-leg-bent.png",
+     "w": 66,
+     "h": 85,
+     "sourceCut": "coach_030"
+    },
+    "leg-c": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-leg-c.png",
+     "w": 36,
+     "h": 84,
+     "sourceCut": "coach_032"
+    },
+    "leg-d": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-leg-d.png",
+     "w": 45,
+     "h": 73,
+     "sourceCut": "coach_034"
+    },
+    "leg-boot": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-leg-boot.png",
+     "w": 30,
+     "h": 80,
+     "sourceCut": "coach_028"
+    },
+    "arm": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-arm.png",
+     "w": 31,
+     "h": 61,
+     "sourceCut": "master_031"
+    },
+    "forearm-hand": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-forearm-hand.png",
+     "w": 33,
+     "h": 39,
+     "sourceCut": "master_038"
+    },
+    "forearm-hand-b": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-forearm-hand-b.png",
+     "w": 23,
+     "h": 70,
+     "sourceCut": "coach_018"
+    },
+    "forearm-glove": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-forearm-glove.png",
+     "w": 30,
+     "h": 70,
+     "sourceCut": "coach_019"
+    },
+    "glove": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-glove.png",
+     "w": 22,
+     "h": 38,
+     "sourceCut": "master_033"
+    },
+    "shoe-a": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-shoe-a.png",
+     "w": 36,
+     "h": 45,
+     "sourceCut": "master_036"
+    },
+    "shoe-b": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-shoe-b.png",
+     "w": 39,
+     "h": 41,
+     "sourceCut": "master_037"
+    },
+    "hair": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hair.png",
+     "w": 48,
+     "h": 43,
+     "sourceCut": "master_021"
+    },
+    "hand-open": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-open.png",
+     "w": 31,
+     "h": 30,
+     "sourceCut": "coach_023"
+    },
+    "hand-thumb": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-thumb.png",
+     "w": 23,
+     "h": 31,
+     "sourceCut": "coach_025"
+    },
+    "hand-point": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-point.png",
+     "w": 32,
+     "h": 30,
+     "sourceCut": "coach_029"
+    },
+    "hand-fist": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-fist.png",
+     "w": 25,
+     "h": 32,
+     "sourceCut": "coach_026"
+    },
+    "hand-a": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-a.png",
+     "w": 29,
+     "h": 31,
+     "sourceCut": "master_035"
+    },
+    "hand-b": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-b.png",
+     "w": 26,
+     "h": 31,
+     "sourceCut": "master_039"
+    },
+    "hand-c": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-c.png",
+     "w": 22,
+     "h": 29,
+     "sourceCut": "master_040"
+    },
+    "hand-d": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-d.png",
+     "w": 25,
+     "h": 26,
+     "sourceCut": "master_041"
+    },
+    "hand-watch": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-watch.png",
+     "w": 42,
+     "h": 41,
+     "sourceCut": "master_042"
+    },
+    "hand-e": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-e.png",
+     "w": 32,
+     "h": 28,
+     "sourceCut": "coach_011"
+    },
+    "hand-f": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-f.png",
+     "w": 18,
+     "h": 25,
+     "sourceCut": "coach_017"
+    },
+    "hand-g": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-g.png",
+     "w": 24,
+     "h": 22,
+     "sourceCut": "coach_022"
+    },
+    "hand-h": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-hand-h.png",
+     "w": 20,
+     "h": 26,
+     "sourceCut": "coach_027"
+    },
+    "mouth": {
+     "src": "assets/patrol-squad/coach-control/rig/coach-control-mouth.png",
+     "w": 17,
+     "h": 17,
+     "sourceCut": "coach_020"
+    }
+   },
+   "animationMethod": {
+    "fullBody": "pose swapping (cross-fade between supplied full-body poses)",
+    "head": "independent expression-head layer (comm badge): talk cycles, blinks, expression changes",
+    "props": "independent accessory layer with its own pivot animation",
+    "rig": "body-part sprites extracted and documented; not assembled into a skeleton (see limitations)"
+   }
+  },
+  "calm": {
+   "key": "calm",
+   "id": "captain-calm",
+   "name": "Captain Calm",
+   "role": "Emotional Regulation Specialist",
+   "personality": "Patient, reassuring, compassionate, composed, dependable",
+   "visualIdentity": "Teal and silver uniform, calming compass, gentle expressions",
+   "motionProfile": "smooth",
+   "accent": "#2fc7b0",
+   "accent2": "#d7f4ef",
+   "voice": {
+    "pitch": 1.08,
+    "rate": 0.9
+   },
+   "defaultIdlePose": "meditate",
+   "board": {
+    "x": 1178,
+    "baseline": 714,
+    "height": 124,
+    "unit": 167.6,
+    "idle": [
+     "meditate",
+     "breathing"
+    ],
+    "alternates": [],
+    "safePoses": [
+     "breathing",
+     "heart-hands",
+     "meditate",
+     "meditate-eyes-closed"
+    ],
+    "statePose": {
+     "idle": "meditate",
+     "attention": "meditate",
+     "greeting": "meditate",
+     "thinking": "meditate",
+     "speaking": "meditate",
+     "encouraging": "meditate",
+     "coaching": "meditate",
+     "retry": "meditate",
+     "celebrating": "meditate",
+     "missionAlert": "meditate",
+     "missionComplete": "meditate"
+    }
+   },
+   "states": {
+    "idle": {
+     "poses": [
+      [
+       "meditate",
+       0
+      ]
+     ],
+     "badge": [
+      "soft"
+     ],
+     "motion": "breathe-slow"
+    },
+    "attention": {
+     "poses": [
+      [
+       "open-palms",
+       0
+      ]
+     ],
+     "badge": [
+      "gentle",
+      "soft"
+     ],
+     "motion": "settle"
+    },
+    "greeting": {
+     "poses": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "open-palms",
+       1300
+      ]
+     ],
+     "badge": [
+      "smile",
+      "soft"
+     ],
+     "motion": "settle"
+    },
+    "thinking": {
+     "poses": [
+      [
+       "meditate",
+       0
+      ]
+     ],
+     "badge": [
+      "portrait-glance"
+     ],
+     "motion": "breathe-slow"
+    },
+    "speaking": {
+     "poses": [
+      [
+       "open-palms",
+       0
+      ]
+     ],
+     "badge": [
+      "happy",
+      "soft"
+     ],
+     "motion": "sway-slow"
+    },
+    "encouraging": {
+     "poses": [
+      [
+       "open-palms",
+       0
+      ]
+     ],
+     "badge": [
+      "happy",
+      "smile"
+     ],
+     "motion": "nod-slow"
+    },
+    "coaching": {
+     "poses": [
+      [
+       "meditate",
+       0
+      ],
+      [
+       "breathing",
+       1100
+      ],
+      [
+       "meditate",
+       2400
+      ]
+     ],
+     "badge": [
+      "soft",
+      "eyes-closed"
+     ],
+     "motion": "breathe-slow",
+     "prop": [
+      "compass",
+      "swing"
+     ]
+    },
+    "retry": {
+     "poses": [
+      [
+       "open-palms",
+       0
+      ]
+     ],
+     "badge": [
+      "gentle",
+      "soft"
+     ],
+     "motion": "nod-slow"
+    },
+    "celebrating": {
+     "poses": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "celebrate",
+       700
+      ]
+     ],
+     "badge": [
+      "happy",
+      "smile"
+     ],
+     "motion": "float"
+    },
+    "missionAlert": {
+     "poses": [
+      [
+       "crouch-ready",
+       0
+      ]
+     ],
+     "badge": [
+      "gentle",
+      "soft"
+     ],
+     "motion": "settle"
+    },
+    "missionComplete": {
+     "poses": [
+      [
+       "celebrate",
+       0
+      ]
+     ],
+     "badge": [
+      "happy",
+      "smile"
+     ],
+     "motion": "float"
+    }
+   },
+   "lines": {
+    "plusLoss": [
+     "That’s okay. Take a breath and keep going.",
+     "Breathe in, breathe out. You’ve got this."
+    ],
+    "incorrect": [
+     "Take your time. Let’s look at the helpful answer together.",
+     "It’s okay. Breathe, learn it, and use it next time."
+    ],
+    "cue": [
+     "Notice your body. Take a slow breath.",
+     "Calm body, clear mind. What do you notice?"
+    ],
+    "info": [
+     "Anger is normal. We get to choose what we do with it.",
+     "Feelings are okay. Calm choices help."
+    ],
+    "detour": [
+     "Take a breath. You’ll be back on patrol soon.",
+     "A quick reset. Calm and ready for next time."
+    ],
+    "reflection": [
+     "Nice reflection. That’s how we reset."
+    ],
+    "idle": [
+     "Calm body. Clear mind."
+    ]
+   },
+   "poses": {
+    "idle": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-idle.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-idle@2x.webp",
+     "w": 74,
+     "h": 144,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "calm_a_001"
+    },
+    "open-palms": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-open-palms.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-open-palms@2x.webp",
+     "w": 107,
+     "h": 178,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "calm_a_002"
+    },
+    "breathing": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-breathing.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-breathing@2x.webp",
+     "w": 103,
+     "h": 121,
+     "heightFactor": 0.74,
+     "family": "c",
+     "sourceCut": "calm_a_005"
+    },
+    "heart-hands": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-heart-hands.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-heart-hands@2x.webp",
+     "w": 90,
+     "h": 118,
+     "heightFactor": 0.74,
+     "family": "m",
+     "sourceCut": "master_049"
+    },
+    "meditate-eyes-closed": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-meditate-eyes-closed.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-meditate-eyes-closed@2x.webp",
+     "w": 69,
+     "h": 117,
+     "heightFactor": 0.76,
+     "family": "m",
+     "sourceCut": "master_051"
+    },
+    "meditate": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-meditate.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-meditate@2x.webp",
+     "w": 85,
+     "h": 118,
+     "heightFactor": 0.74,
+     "family": "c",
+     "sourceCut": "calm_a_003"
+    },
+    "celebrate": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-celebrate.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-celebrate@2x.webp",
+     "w": 79,
+     "h": 137,
+     "heightFactor": 1.03,
+     "family": "c",
+     "sourceCut": "calm_a_004"
+    },
+    "crouch-ready": {
+     "src": "assets/patrol-squad/captain-calm/poses/captain-calm-crouch-ready.png",
+     "display": "assets/patrol-squad/captain-calm/poses/captain-calm-crouch-ready@2x.webp",
+     "w": 92,
+     "h": 133,
+     "heightFactor": 0.86,
+     "family": "c",
+     "sourceCut": "calm_a_000"
+    }
+   },
+   "expressions": {
+    "neutral": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-neutral.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-neutral@2x.webp",
+     "sourceCut": "master_044"
+    },
+    "smile": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-smile.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-smile@2x.webp",
+     "sourceCut": "master_048"
+    },
+    "soft": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-soft.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-soft@2x.webp",
+     "sourceCut": "master_050"
+    },
+    "eyes-closed": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-eyes-closed.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-eyes-closed@2x.webp",
+     "sourceCut": "master_047"
+    },
+    "gentle": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-gentle.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-gentle@2x.webp",
+     "sourceCut": "master_052"
+    },
+    "happy": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-happy.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-happy@2x.webp",
+     "sourceCut": "master_054"
+    },
+    "portrait-smile": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-portrait-smile.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-portrait-smile@2x.webp",
+     "sourceCut": "calm_a_006"
+    },
+    "portrait-soft": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-portrait-soft.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-portrait-soft@2x.webp",
+     "sourceCut": "calm_a_007"
+    },
+    "portrait-glance": {
+     "src": "assets/patrol-squad/captain-calm/expressions/captain-calm-portrait-glance.png",
+     "display": "assets/patrol-squad/captain-calm/expressions/captain-calm-portrait-glance@2x.webp",
+     "sourceCut": "calm_a_015"
+    }
+   },
+   "accessories": {
+    "compass": {
+     "src": "assets/patrol-squad/captain-calm/accessories/captain-calm-compass.png",
+     "display": "assets/patrol-squad/captain-calm/accessories/captain-calm-compass@2x.webp",
+     "sourceCut": "master_080"
+    },
+    "belt": {
+     "src": "assets/patrol-squad/captain-calm/accessories/captain-calm-belt.png",
+     "display": "assets/patrol-squad/captain-calm/accessories/captain-calm-belt@2x.webp",
+     "sourceCut": "calm_a_033"
+    }
+   },
+   "rig": {
+    "cap": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-cap.png",
+     "w": 64,
+     "h": 52,
+     "sourceCut": "master_056",
+     "note": "split from master_056 at x=62 (left)"
+    },
+    "hair": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hair.png",
+     "w": 59,
+     "h": 49,
+     "sourceCut": "master_056",
+     "note": "split from master_056 at x=62 (right)"
+    },
+    "torso": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-torso.png",
+     "w": 62,
+     "h": 77,
+     "sourceCut": "calm_a_013"
+    },
+    "vest": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-vest.png",
+     "w": 57,
+     "h": 67,
+     "sourceCut": "calm_a_014"
+    },
+    "sleeve": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-sleeve.png",
+     "w": 35,
+     "h": 74,
+     "sourceCut": "calm_a_016"
+    },
+    "arm-a": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-arm-a.png",
+     "w": 26,
+     "h": 73,
+     "sourceCut": "calm_a_018"
+    },
+    "arm-b": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-arm-b.png",
+     "w": 21,
+     "h": 73,
+     "sourceCut": "calm_a_019"
+    },
+    "arm-c": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-arm-c.png",
+     "w": 23,
+     "h": 73,
+     "sourceCut": "calm_a_020"
+    },
+    "arm-d": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-arm-d.png",
+     "w": 26,
+     "h": 71,
+     "sourceCut": "calm_a_021"
+    },
+    "arm-bent-hand": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-arm-bent-hand.png",
+     "w": 37,
+     "h": 64,
+     "sourceCut": "master_066"
+    },
+    "arm-bent": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-arm-bent.png",
+     "w": 48,
+     "h": 45,
+     "sourceCut": "master_060"
+    },
+    "arm-upper": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-arm-upper.png",
+     "w": 36,
+     "h": 48,
+     "sourceCut": "master_061"
+    },
+    "leg-a": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-leg-a.png",
+     "w": 28,
+     "h": 96,
+     "sourceCut": "calm_a_028"
+    },
+    "leg-b": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-leg-b.png",
+     "w": 34,
+     "h": 96,
+     "sourceCut": "calm_a_029"
+    },
+    "leg-c": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-leg-c.png",
+     "w": 28,
+     "h": 94,
+     "sourceCut": "calm_a_030"
+    },
+    "legs-pair": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-legs-pair.png",
+     "w": 57,
+     "h": 88,
+     "sourceCut": "calm_a_032"
+    },
+    "shin-shoe-a": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-shin-shoe-a.png",
+     "w": 33,
+     "h": 63,
+     "sourceCut": "calm_a_034"
+    },
+    "shin-shoe-b": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-shin-shoe-b.png",
+     "w": 31,
+     "h": 64,
+     "sourceCut": "calm_a_035"
+    },
+    "shoe-a": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-shoe-a.png",
+     "w": 40,
+     "h": 53,
+     "sourceCut": "calm_a_037"
+    },
+    "shoe-b": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-shoe-b.png",
+     "w": 26,
+     "h": 49,
+     "sourceCut": "calm_a_039"
+    },
+    "hand-a": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hand-a.png",
+     "w": 29,
+     "h": 28,
+     "sourceCut": "calm_a_017"
+    },
+    "hand-b": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hand-b.png",
+     "w": 29,
+     "h": 21,
+     "sourceCut": "calm_a_022"
+    },
+    "hand-c": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hand-c.png",
+     "w": 29,
+     "h": 20,
+     "sourceCut": "calm_a_023"
+    },
+    "hand-d": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hand-d.png",
+     "w": 30,
+     "h": 26,
+     "sourceCut": "calm_a_024"
+    },
+    "hand-e": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hand-e.png",
+     "w": 27,
+     "h": 25,
+     "sourceCut": "calm_a_025"
+    },
+    "hand-f": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hand-f.png",
+     "w": 27,
+     "h": 28,
+     "sourceCut": "calm_a_026"
+    },
+    "hand-g": {
+     "src": "assets/patrol-squad/captain-calm/rig/captain-calm-hand-g.png",
+     "w": 32,
+     "h": 27,
+     "sourceCut": "calm_a_027"
+    }
+   },
+   "animationMethod": {
+    "fullBody": "pose swapping (cross-fade between supplied full-body poses)",
+    "head": "independent expression-head layer (comm badge): talk cycles, blinks, expression changes",
+    "props": "independent accessory layer with its own pivot animation",
+    "rig": "body-part sprites extracted and documented; not assembled into a skeleton (see limitations)"
+   }
+  },
+  "pause": {
+   "key": "pause",
+   "id": "sergeant-pause",
+   "name": "Sergeant Pause",
+   "role": "Impulse Control Specialist",
+   "personality": "Alert, disciplined, observant, protective, firm but friendly",
+   "visualIdentity": "Orange and charcoal uniform, STOP paddle, rank insignia",
+   "motionProfile": "crisp",
+   "accent": "#ff8a2a",
+   "accent2": "#2a2f38",
+   "voice": {
+    "pitch": 0.92,
+    "rate": 0.94
+   },
+   "defaultIdlePose": "stop-sign",
+   "board": {
+    "x": 596,
+    "baseline": 530,
+    "height": 160,
+    "unit": 160.0,
+    "idle": [
+     "stop-sign"
+    ],
+    "alternates": [
+     "lookout",
+     "ready"
+    ],
+    "safePoses": [
+     "alert",
+     "approve-flex",
+     "idle",
+     "lookout",
+     "point",
+     "ready",
+     "run",
+     "stop-hand",
+     "stop-sign"
+    ],
+    "statePose": {
+     "idle": "stop-sign",
+     "attention": "alert",
+     "greeting": "ready",
+     "thinking": "idle",
+     "speaking": "ready",
+     "encouraging": "stop-sign",
+     "coaching": "stop-hand",
+     "retry": "stop-hand",
+     "celebrating": "stop-sign",
+     "missionAlert": "alert",
+     "missionComplete": "stop-sign"
+    }
+   },
+   "states": {
+    "idle": {
+     "poses": [
+      [
+       "stop-sign",
+       0
+      ]
+     ],
+     "badge": [
+      "neutral"
+     ],
+     "motion": "hold"
+    },
+    "attention": {
+     "poses": [
+      [
+       "alert",
+       0
+      ]
+     ],
+     "badge": [
+      "neutral",
+      "talk"
+     ],
+     "motion": "snap"
+    },
+    "greeting": {
+     "poses": [
+      [
+       "ready",
+       0
+      ]
+     ],
+     "badge": [
+      "smile",
+      "grin"
+     ],
+     "motion": "snap"
+    },
+    "thinking": {
+     "poses": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "lookout",
+       1000
+      ]
+     ],
+     "badge": [
+      "squint",
+      "neutral"
+     ],
+     "motion": "look"
+    },
+    "speaking": {
+     "poses": [
+      [
+       "ready",
+       0
+      ]
+     ],
+     "badge": [
+      "talk",
+      "neutral"
+     ],
+     "motion": "hold"
+    },
+    "encouraging": {
+     "poses": [
+      [
+       "approve-flex",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "smile"
+     ],
+     "motion": "nod"
+    },
+    "coaching": {
+     "poses": [
+      [
+       "stop-hand",
+       0
+      ],
+      [
+       "ready",
+       1600
+      ]
+     ],
+     "badge": [
+      "talk",
+      "smile"
+     ],
+     "motion": "raise-hold",
+     "prop": [
+      "stop-paddle",
+      "raise"
+     ]
+    },
+    "retry": {
+     "poses": [
+      [
+       "stop-hand",
+       0
+      ],
+      [
+       "lookout",
+       1500
+      ]
+     ],
+     "badge": [
+      "talk",
+      "neutral"
+     ],
+     "motion": "raise-hold",
+     "prop": [
+      "stop-paddle",
+      "raise"
+     ]
+    },
+    "celebrating": {
+     "poses": [
+      [
+       "approve-flex",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "wink"
+     ],
+     "motion": "pump"
+    },
+    "missionAlert": {
+     "poses": [
+      [
+       "alert",
+       0
+      ],
+      [
+       "stop-sign",
+       450
+      ]
+     ],
+     "badge": [
+      "talk",
+      "neutral"
+     ],
+     "motion": "raise-hold"
+    },
+    "missionComplete": {
+     "poses": [
+      [
+       "approve-flex",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "wink"
+     ],
+     "motion": "pump"
+    }
+   },
+   "lines": {
+    "situation": [
+     "Stop. Think. Then choose.",
+     "Freeze! Think before you act."
+    ],
+    "encounter": [
+     "Stop and notice. Then choose a calm response.",
+     "Pause first — you stay in control."
+    ],
+    "idle": [
+     "Stop. Pause. Choose."
+    ]
+   },
+   "poses": {
+    "stop-sign": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-stop-sign.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-stop-sign@2x.webp",
+     "w": 100,
+     "h": 141,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_081"
+    },
+    "stop-hand": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-stop-hand.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-stop-hand@2x.webp",
+     "w": 78,
+     "h": 136,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_082"
+    },
+    "idle": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-idle.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-idle@2x.webp",
+     "w": 62,
+     "h": 120,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_087"
+    },
+    "ready": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-ready.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-ready@2x.webp",
+     "w": 65,
+     "h": 139,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_083"
+    },
+    "alert": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-alert.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-alert@2x.webp",
+     "w": 71,
+     "h": 136,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_084"
+    },
+    "approve-flex": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-approve-flex.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-approve-flex@2x.webp",
+     "w": 84,
+     "h": 151,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "pause_002"
+    },
+    "point": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-point.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-point@2x.webp",
+     "w": 122,
+     "h": 120,
+     "heightFactor": 0.86,
+     "family": "c",
+     "sourceCut": "pause_003"
+    },
+    "run": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-run.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-run@2x.webp",
+     "w": 100,
+     "h": 122,
+     "heightFactor": 0.9,
+     "family": "m",
+     "sourceCut": "master_085"
+    },
+    "lookout": {
+     "src": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-lookout.png",
+     "display": "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-lookout@2x.webp",
+     "w": 78,
+     "h": 123,
+     "heightFactor": 0.92,
+     "family": "m",
+     "sourceCut": "master_086"
+    }
+   },
+   "expressions": {
+    "neutral": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-neutral.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-neutral@2x.webp",
+     "sourceCut": "pause_009"
+    },
+    "smile": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-smile.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-smile@2x.webp",
+     "sourceCut": "pause_007"
+    },
+    "grin": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-grin.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-grin@2x.webp",
+     "sourceCut": "pause_005"
+    },
+    "talk": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-talk.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-talk@2x.webp",
+     "sourceCut": "pause_008"
+    },
+    "wink": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-wink.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-wink@2x.webp",
+     "sourceCut": "pause_006"
+    },
+    "squint": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-squint.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-squint@2x.webp",
+     "sourceCut": "pause_010"
+    },
+    "portrait": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-portrait.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-portrait@2x.webp",
+     "sourceCut": "pause_004"
+    },
+    "portrait-smile": {
+     "src": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-portrait-smile.png",
+     "display": "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-portrait-smile@2x.webp",
+     "sourceCut": "pause_017"
+    }
+   },
+   "accessories": {
+    "stop-paddle": {
+     "src": "assets/patrol-squad/sergeant-pause/accessories/sergeant-pause-stop-paddle.png",
+     "display": "assets/patrol-squad/sergeant-pause/accessories/sergeant-pause-stop-paddle@2x.webp",
+     "sourceCut": "pause_035"
+    },
+    "stop-paddle-small": {
+     "src": "assets/patrol-squad/sergeant-pause/accessories/sergeant-pause-stop-paddle-small.png",
+     "display": "assets/patrol-squad/sergeant-pause/accessories/sergeant-pause-stop-paddle-small@2x.webp",
+     "sourceCut": "master_099"
+    },
+    "headset": {
+     "src": "assets/patrol-squad/sergeant-pause/accessories/sergeant-pause-headset.png",
+     "display": "assets/patrol-squad/sergeant-pause/accessories/sergeant-pause-headset@2x.webp",
+     "sourceCut": "master_100"
+    }
+   },
+   "rig": {
+    "head": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-head.png",
+     "w": 64,
+     "h": 69,
+     "sourceCut": "master_101",
+     "note": "split from master_101 at x=62 (left)"
+    },
+    "hair": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hair.png",
+     "w": 59,
+     "h": 50,
+     "sourceCut": "master_101",
+     "note": "split from master_101 at x=62 (right)"
+    },
+    "torso": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-torso.png",
+     "w": 59,
+     "h": 68,
+     "sourceCut": "pause_011"
+    },
+    "vest": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-vest.png",
+     "w": 50,
+     "h": 51,
+     "sourceCut": "pause_012"
+    },
+    "arm-a": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-arm-a.png",
+     "w": 24,
+     "h": 62,
+     "sourceCut": "master_104"
+    },
+    "arm-b": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-arm-b.png",
+     "w": 21,
+     "h": 61,
+     "sourceCut": "master_105"
+    },
+    "arm-c": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-arm-c.png",
+     "w": 20,
+     "h": 62,
+     "sourceCut": "master_106"
+    },
+    "arm-d": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-arm-d.png",
+     "w": 25,
+     "h": 61,
+     "sourceCut": "pause_013"
+    },
+    "arm-e": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-arm-e.png",
+     "w": 21,
+     "h": 61,
+     "sourceCut": "pause_014"
+    },
+    "leg-a": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-leg-a.png",
+     "w": 27,
+     "h": 104,
+     "sourceCut": "pause_031"
+    },
+    "leg-b": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-leg-b.png",
+     "w": 30,
+     "h": 103,
+     "sourceCut": "pause_032"
+    },
+    "legs-bent": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-legs-bent.png",
+     "w": 56,
+     "h": 103,
+     "sourceCut": "pause_030"
+    },
+    "legs-pair": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-legs-pair.png",
+     "w": 62,
+     "h": 66,
+     "sourceCut": "master_123"
+    },
+    "leg-c": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-leg-c.png",
+     "w": 23,
+     "h": 57,
+     "sourceCut": "master_118"
+    },
+    "leg-d": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-leg-d.png",
+     "w": 35,
+     "h": 67,
+     "sourceCut": "master_119"
+    },
+    "leg-e": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-leg-e.png",
+     "w": 27,
+     "h": 60,
+     "sourceCut": "master_120"
+    },
+    "leg-f": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-leg-f.png",
+     "w": 33,
+     "h": 63,
+     "sourceCut": "master_121"
+    },
+    "leg-g": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-leg-g.png",
+     "w": 37,
+     "h": 65,
+     "sourceCut": "master_122"
+    },
+    "boot-a": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-boot-a.png",
+     "w": 37,
+     "h": 77,
+     "sourceCut": "pause_037"
+    },
+    "boot-b": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-boot-b.png",
+     "w": 44,
+     "h": 63,
+     "sourceCut": "pause_038"
+    },
+    "boot-c": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-boot-c.png",
+     "w": 31,
+     "h": 68,
+     "sourceCut": "pause_039"
+    },
+    "boot-d": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-boot-d.png",
+     "w": 31,
+     "h": 53,
+     "sourceCut": "master_124"
+    },
+    "hand-a": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-a.png",
+     "w": 25,
+     "h": 29,
+     "sourceCut": "master_107"
+    },
+    "hand-b": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-b.png",
+     "w": 27,
+     "h": 28,
+     "sourceCut": "master_114"
+    },
+    "hand-c": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-c.png",
+     "w": 25,
+     "h": 25,
+     "sourceCut": "master_115"
+    },
+    "hand-d": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-d.png",
+     "w": 21,
+     "h": 24,
+     "sourceCut": "master_116"
+    },
+    "hand-e": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-e.png",
+     "w": 23,
+     "h": 28,
+     "sourceCut": "master_117"
+    },
+    "hand-f": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-f.png",
+     "w": 24,
+     "h": 45,
+     "sourceCut": "pause_018"
+    },
+    "hand-g": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-g.png",
+     "w": 25,
+     "h": 32,
+     "sourceCut": "pause_026"
+    },
+    "hand-h": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-h.png",
+     "w": 23,
+     "h": 31,
+     "sourceCut": "pause_027"
+    },
+    "hand-i": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-i.png",
+     "w": 25,
+     "h": 30,
+     "sourceCut": "pause_028"
+    },
+    "hand-j": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-hand-j.png",
+     "w": 29,
+     "h": 38,
+     "sourceCut": "pause_015"
+    },
+    "glove": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-glove.png",
+     "w": 28,
+     "h": 41,
+     "sourceCut": "master_126"
+    },
+    "glove-point": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-glove-point.png",
+     "w": 21,
+     "h": 60,
+     "sourceCut": "pause_040"
+    },
+    "mouth-a": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-mouth-a.png",
+     "w": 17,
+     "h": 16,
+     "sourceCut": "master_110"
+    },
+    "mouth-b": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-mouth-b.png",
+     "w": 18,
+     "h": 17,
+     "sourceCut": "master_111"
+    },
+    "mouth-c": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-mouth-c.png",
+     "w": 17,
+     "h": 16,
+     "sourceCut": "master_113"
+    },
+    "mouth-d": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-mouth-d.png",
+     "w": 20,
+     "h": 17,
+     "sourceCut": "pause_033"
+    },
+    "mouth-e": {
+     "src": "assets/patrol-squad/sergeant-pause/rig/sergeant-pause-mouth-e.png",
+     "w": 22,
+     "h": 16,
+     "sourceCut": "pause_034"
+    }
+   },
+   "animationMethod": {
+    "fullBody": "pose swapping (cross-fade between supplied full-body poses)",
+    "head": "independent expression-head layer (comm badge): talk cycles, blinks, expression changes",
+    "props": "independent accessory layer with its own pivot animation",
+    "rig": "body-part sprites extracted and documented; not assembled into a skeleton (see limitations)"
+   }
+  },
+  "think": {
+   "key": "think",
+   "id": "detective-think",
+   "name": "Detective Think",
+   "role": "Problem-Solving Specialist",
+   "personality": "Curious, clever, analytical, creative, thoughtful",
+   "visualIdentity": "Purple and gold detective outfit, glasses, magnifying glass, notebook",
+   "motionProfile": "inquisitive",
+   "accent": "#9b5cff",
+   "accent2": "#f0c24a",
+   "voice": {
+    "pitch": 1.15,
+    "rate": 1.0
+   },
+   "defaultIdlePose": "magnifier",
+   "board": {
+    "x": 849,
+    "baseline": 452,
+    "height": 136,
+    "unit": 136,
+    "idle": [
+     "magnifier"
+    ],
+    "alternates": [
+     "inspect",
+     "thinking"
+    ],
+    "safePoses": [
+     "discover",
+     "explain-book",
+     "idea",
+     "inspect",
+     "investigate",
+     "magnifier",
+     "notebook",
+     "thinking",
+     "wave"
+    ],
+    "statePose": {
+     "idle": "magnifier",
+     "attention": "idea",
+     "greeting": "wave",
+     "thinking": "thinking",
+     "speaking": "explain-book",
+     "encouraging": "idea",
+     "coaching": "notebook",
+     "retry": "investigate",
+     "celebrating": "discover",
+     "missionAlert": "magnifier",
+     "missionComplete": "discover"
+    }
+   },
+   "states": {
+    "idle": {
+     "poses": [
+      [
+       "magnifier",
+       0
+      ]
+     ],
+     "badge": [
+      "smile"
+     ],
+     "motion": "tilt"
+    },
+    "attention": {
+     "poses": [
+      [
+       "idea",
+       0
+      ]
+     ],
+     "badge": [
+      "curious",
+      "smile"
+     ],
+     "motion": "pop"
+    },
+    "greeting": {
+     "poses": [
+      [
+       "wave",
+       0
+      ]
+     ],
+     "badge": [
+      "cheerful",
+      "smile"
+     ],
+     "motion": "wave"
+    },
+    "thinking": {
+     "poses": [
+      [
+       "thinking",
+       0
+      ],
+      [
+       "inspect",
+       1200
+      ]
+     ],
+     "badge": [
+      "curious",
+      "skeptical"
+     ],
+     "motion": "tilt",
+     "prop": [
+      "magnifier",
+      "sweep"
+     ]
+    },
+    "speaking": {
+     "poses": [
+      [
+       "explain-book",
+       0
+      ]
+     ],
+     "badge": [
+      "happy",
+      "smile"
+     ],
+     "motion": "talk"
+    },
+    "encouraging": {
+     "poses": [
+      [
+       "idea",
+       0
+      ]
+     ],
+     "badge": [
+      "happy",
+      "smile"
+     ],
+     "motion": "nod"
+    },
+    "coaching": {
+     "poses": [
+      [
+       "notebook",
+       0
+      ],
+      [
+       "explain-book",
+       1300
+      ]
+     ],
+     "badge": [
+      "happy",
+      "gentle"
+     ],
+     "motion": "talk",
+     "prop": [
+      "notebook",
+      "flip"
+     ]
+    },
+    "retry": {
+     "poses": [
+      [
+       "investigate",
+       0
+      ]
+     ],
+     "badge": [
+      "curious",
+      "smile"
+     ],
+     "motion": "tilt"
+    },
+    "celebrating": {
+     "poses": [
+      [
+       "discover",
+       0
+      ],
+      [
+       "idea",
+       900
+      ]
+     ],
+     "badge": [
+      "cheerful",
+      "happy"
+     ],
+     "motion": "eureka"
+    },
+    "missionAlert": {
+     "poses": [
+      [
+       "magnifier",
+       0
+      ],
+      [
+       "inspect",
+       1100
+      ]
+     ],
+     "badge": [
+      "curious",
+      "skeptical"
+     ],
+     "motion": "tilt",
+     "prop": [
+      "magnifier",
+      "sweep"
+     ]
+    },
+    "missionComplete": {
+     "poses": [
+      [
+       "discover",
+       0
+      ],
+      [
+       "wave",
+       900
+      ]
+     ],
+     "badge": [
+      "cheerful",
+      "happy"
+     ],
+     "motion": "eureka"
+    }
+   },
+   "lines": {
+    "payoff": [
+     "What could happen next? Compare the choices.",
+     "Let’s look for clues about the best payoff."
+    ],
+    "question": [
+     "What clues can help us decide?",
+     "Read each choice like a detective."
+    ],
+    "firstTry": [
+     "Great detective work — you found it!",
+     "Clue solved on the first try!"
+    ],
+    "teaching": [
+     "Compare these ideas like clues. Which one could work best in a different situation, and why?"
+    ],
+    "idle": [
+     "Look for the clue."
+    ]
+   },
+   "poses": {
+    "magnifier": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-magnifier.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-magnifier@2x.webp",
+     "w": 87,
+     "h": 130,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_128"
+    },
+    "notebook": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-notebook.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-notebook@2x.webp",
+     "w": 75,
+     "h": 130,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_129"
+    },
+    "idle": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-idle.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-idle@2x.webp",
+     "w": 62,
+     "h": 131,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_130"
+    },
+    "thinking": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-thinking.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-thinking@2x.webp",
+     "w": 62,
+     "h": 128,
+     "heightFactor": 0.99,
+     "family": "m",
+     "sourceCut": "master_131"
+    },
+    "wave": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-wave.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-wave@2x.webp",
+     "w": 74,
+     "h": 129,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_132"
+    },
+    "inspect": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-inspect.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-inspect@2x.webp",
+     "w": 74,
+     "h": 128,
+     "heightFactor": 0.99,
+     "family": "m",
+     "sourceCut": "master_133"
+    },
+    "idea": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-idea.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-idea@2x.webp",
+     "w": 77,
+     "h": 132,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_134"
+    },
+    "discover": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-discover.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-discover@2x.webp",
+     "w": 81,
+     "h": 119,
+     "heightFactor": 0.9,
+     "family": "m",
+     "sourceCut": "master_135"
+    },
+    "investigate": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-investigate.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-investigate@2x.webp",
+     "w": 77,
+     "h": 122,
+     "heightFactor": 0.92,
+     "family": "m",
+     "sourceCut": "master_136"
+    },
+    "explain-book": {
+     "src": "assets/patrol-squad/detective-think/poses/detective-think-explain-book.png",
+     "display": "assets/patrol-squad/detective-think/poses/detective-think-explain-book@2x.webp",
+     "w": 78,
+     "h": 131,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_137"
+    }
+   },
+   "expressions": {
+    "smile": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-smile.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-smile@2x.webp",
+     "sourceCut": "master_138"
+    },
+    "gentle": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-gentle.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-gentle@2x.webp",
+     "sourceCut": "master_139"
+    },
+    "glance": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-glance.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-glance@2x.webp",
+     "sourceCut": "master_140"
+    },
+    "skeptical": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-skeptical.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-skeptical@2x.webp",
+     "sourceCut": "master_141"
+    },
+    "smirk": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-smirk.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-smirk@2x.webp",
+     "sourceCut": "master_142"
+    },
+    "neutral": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-neutral.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-neutral@2x.webp",
+     "sourceCut": "master_143"
+    },
+    "curious": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-curious.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-curious@2x.webp",
+     "sourceCut": "master_144"
+    },
+    "surprised": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-surprised.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-surprised@2x.webp",
+     "sourceCut": "master_145"
+    },
+    "happy": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-happy.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-happy@2x.webp",
+     "sourceCut": "master_146"
+    },
+    "sly": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-sly.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-sly@2x.webp",
+     "sourceCut": "master_147"
+    },
+    "cheerful": {
+     "src": "assets/patrol-squad/detective-think/expressions/detective-think-cheerful.png",
+     "display": "assets/patrol-squad/detective-think/expressions/detective-think-cheerful@2x.webp",
+     "sourceCut": "master_148"
+    }
+   },
+   "accessories": {
+    "magnifier": {
+     "src": "assets/patrol-squad/detective-think/accessories/detective-think-magnifier.png",
+     "display": "assets/patrol-squad/detective-think/accessories/detective-think-magnifier@2x.webp",
+     "sourceCut": "master_159"
+    },
+    "notebook": {
+     "src": "assets/patrol-squad/detective-think/accessories/detective-think-notebook.png",
+     "display": "assets/patrol-squad/detective-think/accessories/detective-think-notebook@2x.webp",
+     "sourceCut": "master_160"
+    },
+    "clipboard": {
+     "src": "assets/patrol-squad/detective-think/accessories/detective-think-clipboard.png",
+     "display": "assets/patrol-squad/detective-think/accessories/detective-think-clipboard@2x.webp",
+     "sourceCut": "master_161"
+    }
+   },
+   "rig": {
+    "hat": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-hat.png",
+     "w": 70,
+     "h": 49,
+     "sourceCut": "master_149"
+    },
+    "glasses": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-glasses.png",
+     "w": 62,
+     "h": 24,
+     "sourceCut": "master_150"
+    },
+    "hair": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-hair.png",
+     "w": 64,
+     "h": 59,
+     "sourceCut": "master_151"
+    },
+    "torso": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-torso.png",
+     "w": 57,
+     "h": 56,
+     "sourceCut": "master_152"
+    },
+    "arm-a": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-arm-a.png",
+     "w": 29,
+     "h": 60,
+     "sourceCut": "master_153"
+    },
+    "arm-b": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-arm-b.png",
+     "w": 19,
+     "h": 58,
+     "sourceCut": "master_154"
+    },
+    "arm-c": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-arm-c.png",
+     "w": 28,
+     "h": 60,
+     "sourceCut": "master_155"
+    },
+    "hand-a": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-hand-a.png",
+     "w": 27,
+     "h": 28,
+     "sourceCut": "master_156"
+    },
+    "hand-b": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-hand-b.png",
+     "w": 22,
+     "h": 24,
+     "sourceCut": "master_157"
+    },
+    "hand-c": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-hand-c.png",
+     "w": 25,
+     "h": 22,
+     "sourceCut": "master_158"
+    },
+    "leg-a": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-leg-a.png",
+     "w": 24,
+     "h": 71,
+     "sourceCut": "master_162"
+    },
+    "leg-b": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-leg-b.png",
+     "w": 37,
+     "h": 68,
+     "sourceCut": "master_163"
+    },
+    "leg-c": {
+     "src": "assets/patrol-squad/detective-think/rig/detective-think-leg-c.png",
+     "w": 51,
+     "h": 68,
+     "sourceCut": "master_164"
+    }
+   },
+   "animationMethod": {
+    "fullBody": "pose swapping (cross-fade between supplied full-body poses)",
+    "head": "independent expression-head layer (comm badge): talk cycles, blinks, expression changes",
+    "props": "independent accessory layer with its own pivot animation",
+    "rig": "body-part sprites extracted and documented; not assembled into a skeleton (see limitations)"
+   }
+  },
+  "flex": {
+   "key": "flex",
+   "id": "commander-flex",
+   "name": "Commander Flex",
+   "role": "Flexibility and Resilience Specialist",
+   "personality": "Adventurous, optimistic, resourceful, adaptable, resilient",
+   "visualIdentity": "Emerald green and navy adventure uniform, goggles, mission gear",
+   "motionProfile": "springy",
+   "accent": "#3fd16b",
+   "accent2": "#173a63",
+   "voice": {
+    "pitch": 1.1,
+    "rate": 1.06
+   },
+   "defaultIdlePose": "idle",
+   "board": {
+    "x": 666,
+    "baseline": 951,
+    "height": 108,
+    "unit": 108.0,
+    "idle": [
+     "idle"
+    ],
+    "alternates": [
+     "point",
+     "change-direction"
+    ],
+    "safePoses": [
+     "change-direction",
+     "idle",
+     "point",
+     "ready",
+     "thumbs-up-map"
+    ],
+    "statePose": {
+     "idle": "idle",
+     "attention": "idle",
+     "greeting": "idle",
+     "thinking": "idle",
+     "speaking": "point",
+     "encouraging": "idle",
+     "coaching": "change-direction",
+     "retry": "change-direction",
+     "celebrating": "idle",
+     "missionAlert": "idle",
+     "missionComplete": "idle"
+    }
+   },
+   "states": {
+    "idle": {
+     "poses": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "badge": [
+      "smile"
+     ],
+     "motion": "spring"
+    },
+    "attention": {
+     "poses": [
+      [
+       "ready",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "smile"
+     ],
+     "motion": "spring"
+    },
+    "greeting": {
+     "poses": [
+      [
+       "thumbs-up-map",
+       0
+      ]
+     ],
+     "badge": [
+      "portrait",
+      "smile"
+     ],
+     "motion": "spring"
+    },
+    "thinking": {
+     "poses": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       1100
+      ]
+     ],
+     "badge": [
+      "neutral",
+      "smile"
+     ],
+     "motion": "tilt",
+     "prop": [
+      "map",
+      "unfold"
+     ]
+    },
+    "speaking": {
+     "poses": [
+      [
+       "point",
+       0
+      ]
+     ],
+     "badge": [
+      "open-grin",
+      "smile"
+     ],
+     "motion": "talk"
+    },
+    "encouraging": {
+     "poses": [
+      [
+       "thumbs-up-map",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "smile"
+     ],
+     "motion": "spring"
+    },
+    "coaching": {
+     "poses": [
+      [
+       "change-direction",
+       0
+      ],
+      [
+       "recovery-bounce",
+       1300
+      ]
+     ],
+     "badge": [
+      "open-grin",
+      "smile"
+     ],
+     "motion": "spring",
+     "prop": [
+      "map",
+      "unfold"
+     ]
+    },
+    "retry": {
+     "poses": [
+      [
+       "change-direction",
+       0
+      ],
+      [
+       "recovery-bounce",
+       1300
+      ]
+     ],
+     "badge": [
+      "open-grin",
+      "grin"
+     ],
+     "motion": "spring",
+     "prop": [
+      "map",
+      "unfold"
+     ]
+    },
+    "celebrating": {
+     "poses": [
+      [
+       "recovery-bounce",
+       0
+      ],
+      [
+       "celebrate",
+       600
+      ]
+     ],
+     "badge": [
+      "laugh",
+      "excited"
+     ],
+     "motion": "bounce"
+    },
+    "missionAlert": {
+     "poses": [
+      [
+       "power-stance",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "smile"
+     ],
+     "motion": "spring"
+    },
+    "missionComplete": {
+     "poses": [
+      [
+       "celebrate",
+       0
+      ],
+      [
+       "power-stance",
+       1000
+      ]
+     ],
+     "badge": [
+      "laugh",
+      "excited"
+     ],
+     "motion": "bounce"
+    }
+   },
+   "lines": {
+    "retry": [
+     "New strategy! You’ve got this!",
+     "Plans can change. Look again and try once more!"
+    ],
+    "recovery": [
+     "You adjusted and got it! Nice recovery!",
+     "That’s flexible thinking!"
+    ],
+    "exact": [
+     "Plans change! You’ll get your exact roll soon.",
+     "Not this time — stay flexible!"
+    ],
+    "charades": [
+     "Charades time! Get creative!",
+     "Act it out — be flexible and have fun!"
+    ],
+    "idle": [
+     "Plans can change. You can handle it."
+    ]
+   },
+   "poses": {
+    "idle": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-idle.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-idle@2x.webp",
+     "w": 69,
+     "h": 126,
+     "heightFactor": 1.0,
+     "family": "m",
+     "sourceCut": "master_167"
+    },
+    "ready": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-ready.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-ready@2x.webp",
+     "w": 79,
+     "h": 150,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "flex_000"
+    },
+    "power-stance": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-power-stance.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-power-stance@2x.webp",
+     "w": 85,
+     "h": 137,
+     "heightFactor": 1.02,
+     "family": "m",
+     "sourceCut": "master_166"
+    },
+    "point": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-point.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-point@2x.webp",
+     "w": 92,
+     "h": 126,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_168"
+    },
+    "recovery-bounce": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-recovery-bounce.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-recovery-bounce@2x.webp",
+     "w": 74,
+     "h": 127,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_169"
+    },
+    "change-direction": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-change-direction.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-change-direction@2x.webp",
+     "w": 108,
+     "h": 128,
+     "heightFactor": 0.98,
+     "family": "m",
+     "sourceCut": "master_170"
+    },
+    "celebrate": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-celebrate.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-celebrate@2x.webp",
+     "w": 83,
+     "h": 132,
+     "heightFactor": 1.06,
+     "family": "m",
+     "sourceCut": "master_171"
+    },
+    "thumbs-up-map": {
+     "src": "assets/patrol-squad/commander-flex/poses/commander-flex-thumbs-up-map.png",
+     "display": "assets/patrol-squad/commander-flex/poses/commander-flex-thumbs-up-map@2x.webp",
+     "w": 126,
+     "h": 214,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "flex_001"
+    }
+   },
+   "expressions": {
+    "smile": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-smile.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-smile@2x.webp",
+     "sourceCut": "master_173"
+    },
+    "grin": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-grin.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-grin@2x.webp",
+     "sourceCut": "master_175"
+    },
+    "open-grin": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-open-grin.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-open-grin@2x.webp",
+     "sourceCut": "master_177"
+    },
+    "happy": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-happy.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-happy@2x.webp",
+     "sourceCut": "master_179"
+    },
+    "laugh": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-laugh.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-laugh@2x.webp",
+     "sourceCut": "master_183"
+    },
+    "excited": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-excited.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-excited@2x.webp",
+     "sourceCut": "master_188"
+    },
+    "soft": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-soft.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-soft@2x.webp",
+     "sourceCut": "master_191"
+    },
+    "neutral": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-neutral.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-neutral@2x.webp",
+     "sourceCut": "master_196"
+    },
+    "portrait": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-portrait.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-portrait@2x.webp",
+     "sourceCut": "flex_002"
+    },
+    "wink": {
+     "src": "assets/patrol-squad/commander-flex/expressions/commander-flex-wink.png",
+     "display": "assets/patrol-squad/commander-flex/expressions/commander-flex-wink@2x.webp",
+     "sourceCut": "flex_007"
+    }
+   },
+   "accessories": {
+    "map": {
+     "src": "assets/patrol-squad/commander-flex/accessories/commander-flex-map.png",
+     "display": "assets/patrol-squad/commander-flex/accessories/commander-flex-map@2x.webp",
+     "sourceCut": "flex_030"
+    },
+    "backpack": {
+     "src": "assets/patrol-squad/commander-flex/accessories/commander-flex-backpack.png",
+     "display": "assets/patrol-squad/commander-flex/accessories/commander-flex-backpack@2x.webp",
+     "sourceCut": "master_198"
+    },
+    "rope": {
+     "src": "assets/patrol-squad/commander-flex/accessories/commander-flex-rope.png",
+     "display": "assets/patrol-squad/commander-flex/accessories/commander-flex-rope@2x.webp",
+     "sourceCut": "master_199"
+    },
+    "carabiner-line": {
+     "src": "assets/patrol-squad/commander-flex/accessories/commander-flex-carabiner-line.png",
+     "display": "assets/patrol-squad/commander-flex/accessories/commander-flex-carabiner-line@2x.webp",
+     "sourceCut": "master_200"
+    },
+    "belt": {
+     "src": "assets/patrol-squad/commander-flex/accessories/commander-flex-belt.png",
+     "display": "assets/patrol-squad/commander-flex/accessories/commander-flex-belt@2x.webp",
+     "sourceCut": "flex_035"
+    }
+   },
+   "rig": {
+    "cap-goggles": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-cap-goggles.png",
+     "w": 71,
+     "h": 41,
+     "sourceCut": "master_172"
+    },
+    "hair": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-hair.png",
+     "w": 62,
+     "h": 46,
+     "sourceCut": "master_174"
+    },
+    "torso": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-torso.png",
+     "w": 86,
+     "h": 88,
+     "sourceCut": "flex_009"
+    },
+    "vest": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-vest.png",
+     "w": 49,
+     "h": 66,
+     "sourceCut": "flex_010"
+    },
+    "arm-a": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-a.png",
+     "w": 29,
+     "h": 53,
+     "sourceCut": "flex_012"
+    },
+    "arm-b": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-b.png",
+     "w": 22,
+     "h": 52,
+     "sourceCut": "flex_013"
+    },
+    "arm-c": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-c.png",
+     "w": 20,
+     "h": 52,
+     "sourceCut": "flex_014"
+    },
+    "arm-d": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-d.png",
+     "w": 22,
+     "h": 53,
+     "sourceCut": "flex_015"
+    },
+    "arm-e": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-e.png",
+     "w": 28,
+     "h": 48,
+     "sourceCut": "master_180"
+    },
+    "arm-f": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-f.png",
+     "w": 25,
+     "h": 48,
+     "sourceCut": "master_181"
+    },
+    "arm-g": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-g.png",
+     "w": 31,
+     "h": 46,
+     "sourceCut": "master_182"
+    },
+    "arm-h": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-arm-h.png",
+     "w": 31,
+     "h": 45,
+     "sourceCut": "master_184"
+    },
+    "leg-a": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-leg-a.png",
+     "w": 36,
+     "h": 80,
+     "sourceCut": "flex_026"
+    },
+    "leg-b": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-leg-b.png",
+     "w": 39,
+     "h": 79,
+     "sourceCut": "flex_027"
+    },
+    "leg-c": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-leg-c.png",
+     "w": 32,
+     "h": 67,
+     "sourceCut": "flex_028"
+    },
+    "leg-d": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-leg-d.png",
+     "w": 26,
+     "h": 65,
+     "sourceCut": "flex_031"
+    },
+    "leg-e": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-leg-e.png",
+     "w": 27,
+     "h": 56,
+     "sourceCut": "flex_032"
+    },
+    "boot-a": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-boot-a.png",
+     "w": 43,
+     "h": 56,
+     "sourceCut": "flex_029"
+    },
+    "boot-b": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-boot-b.png",
+     "w": 46,
+     "h": 60,
+     "sourceCut": "flex_033"
+    },
+    "gloves": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-gloves.png",
+     "w": 47,
+     "h": 27,
+     "sourceCut": "flex_022"
+    },
+    "gloves-b": {
+     "src": "assets/patrol-squad/commander-flex/rig/commander-flex-gloves-b.png",
+     "w": 43,
+     "h": 33,
+     "sourceCut": "master_195"
+    }
+   },
+   "animationMethod": {
+    "fullBody": "pose swapping (cross-fade between supplied full-body poses)",
+    "head": "independent expression-head layer (comm badge): talk cycles, blinks, expression changes",
+    "props": "independent accessory layer with its own pivot animation",
+    "rig": "body-part sprites extracted and documented; not assembled into a skeleton (see limitations)"
+   }
+  },
+  "focus": {
+   "key": "focus",
+   "id": "officer-focus",
+   "name": "Officer Focus",
+   "role": "Attention and Persistence Specialist",
+   "personality": "Determined, observant, organized, reliable, attentive",
+   "visualIdentity": "Navy and cyan officer uniform, binoculars, checklist",
+   "motionProfile": "precise",
+   "accent": "#38b6ff",
+   "accent2": "#13306b",
+   "voice": {
+    "pitch": 1.12,
+    "rate": 0.98
+   },
+   "defaultIdlePose": "binoculars",
+   "board": {
+    "x": 855,
+    "baseline": 622,
+    "height": 157,
+    "unit": 157,
+    "idle": [
+     "binoculars"
+    ],
+    "alternates": [
+     "binoculars-ready"
+    ],
+    "safePoses": [
+     "binoculars",
+     "binoculars-ready",
+     "clipboard",
+     "kneel-binoculars",
+     "run-point",
+     "scout",
+     "walk-clipboard"
+    ],
+    "statePose": {
+     "idle": "binoculars",
+     "attention": "binoculars-ready",
+     "greeting": "binoculars",
+     "thinking": "binoculars",
+     "speaking": "binoculars",
+     "encouraging": "binoculars",
+     "coaching": "binoculars",
+     "retry": "binoculars-ready",
+     "celebrating": "binoculars",
+     "missionAlert": "binoculars",
+     "missionComplete": "binoculars"
+    }
+   },
+   "states": {
+    "idle": {
+     "poses": [
+      [
+       "binoculars",
+       0
+      ]
+     ],
+     "badge": [
+      "neutral"
+     ],
+     "motion": "scan"
+    },
+    "attention": {
+     "poses": [
+      [
+       "binoculars-ready",
+       0
+      ]
+     ],
+     "badge": [
+      "neutral",
+      "smile"
+     ],
+     "motion": "snap"
+    },
+    "greeting": {
+     "poses": [
+      [
+       "point-clipboard",
+       0
+      ]
+     ],
+     "badge": [
+      "portrait",
+      "smile"
+     ],
+     "motion": "nod"
+    },
+    "thinking": {
+     "poses": [
+      [
+       "binoculars",
+       0
+      ]
+     ],
+     "badge": [
+      "neutral",
+      "soft"
+     ],
+     "motion": "scan",
+     "prop": [
+      "binoculars",
+      "scan"
+     ]
+    },
+    "speaking": {
+     "poses": [
+      [
+       "point-clipboard",
+       0
+      ]
+     ],
+     "badge": [
+      "open-smile",
+      "smile"
+     ],
+     "motion": "talk"
+    },
+    "encouraging": {
+     "poses": [
+      [
+       "point-clipboard",
+       0
+      ]
+     ],
+     "badge": [
+      "grin",
+      "smile"
+     ],
+     "motion": "nod",
+     "prop": [
+      "clipboard",
+      "check"
+     ]
+    },
+    "coaching": {
+     "poses": [
+      [
+       "point-clipboard",
+       0
+      ]
+     ],
+     "badge": [
+      "open-smile",
+      "smile"
+     ],
+     "motion": "nod",
+     "prop": [
+      "clipboard",
+      "check"
+     ]
+    },
+    "retry": {
+     "poses": [
+      [
+       "binoculars-ready",
+       0
+      ]
+     ],
+     "badge": [
+      "soft",
+      "smile"
+     ],
+     "motion": "nod"
+    },
+    "celebrating": {
+     "poses": [
+      [
+       "point-up",
+       0
+      ]
+     ],
+     "badge": [
+      "happy",
+      "grin"
+     ],
+     "motion": "quiet-pop",
+     "prop": [
+      "clipboard",
+      "check"
+     ]
+    },
+    "missionAlert": {
+     "poses": [
+      [
+       "binoculars",
+       0
+      ],
+      [
+       "binoculars-ready",
+       1100
+      ]
+     ],
+     "badge": [
+      "neutral",
+      "open-smile"
+     ],
+     "motion": "scan",
+     "prop": [
+      "binoculars",
+      "scan"
+     ]
+    },
+    "missionComplete": {
+     "poses": [
+      [
+       "point-up",
+       0
+      ]
+     ],
+     "badge": [
+      "happy",
+      "grin"
+     ],
+     "motion": "quiet-pop"
+    }
+   },
+   "lines": {
+    "plus": [
+     "Patrol chip check — let’s see this card."
+    ],
+    "plusGain": [
+     "Chips earned! Nice work.",
+     "Bank it! Great patrol work."
+    ],
+    "reward": [
+     "Chips earned! Your effort paid off.",
+     "Great job — chips earned!"
+    ],
+    "persist": [
+     "You stayed with it. That’s persistence!",
+     "Task complete! Nice focus."
+    ],
+    "social": [
+     "Eyes on the mission. Share a social skill!"
+    ],
+    "timer": [
+     "Stay with it. You’re making progress!",
+     "Focus time — one minute on the clock."
+    ],
+    "timeUp": [
+     "Time! Great focus — let’s talk about it."
+    ],
+    "idle": [
+     "Eyes on the mission."
+    ]
+   },
+   "poses": {
+    "point-clipboard": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-point-clipboard.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-point-clipboard@2x.webp",
+     "w": 108,
+     "h": 155,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "focus_000"
+    },
+    "binoculars": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-binoculars.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-binoculars@2x.webp",
+     "w": 102,
+     "h": 165,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "focus_001"
+    },
+    "binoculars-ready": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-binoculars-ready.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-binoculars-ready@2x.webp",
+     "w": 94,
+     "h": 171,
+     "heightFactor": 1.0,
+     "family": "c",
+     "sourceCut": "focus_002"
+    },
+    "kneel-binoculars": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-kneel-binoculars.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-kneel-binoculars@2x.webp",
+     "w": 76,
+     "h": 111,
+     "heightFactor": 0.74,
+     "family": "m",
+     "sourceCut": "master_204"
+    },
+    "point-up": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-point-up.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-point-up@2x.webp",
+     "w": 102,
+     "h": 113,
+     "heightFactor": 0.76,
+     "family": "c",
+     "sourceCut": "focus_005"
+    },
+    "clipboard": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-clipboard.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-clipboard@2x.webp",
+     "w": 75,
+     "h": 113,
+     "heightFactor": 0.72,
+     "family": "m",
+     "sourceCut": "master_206"
+    },
+    "walk-clipboard": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-walk-clipboard.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-walk-clipboard@2x.webp",
+     "w": 87,
+     "h": 117,
+     "heightFactor": 0.72,
+     "family": "m",
+     "sourceCut": "master_202"
+    },
+    "scout": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-scout.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-scout@2x.webp",
+     "w": 82,
+     "h": 110,
+     "heightFactor": 0.74,
+     "family": "m",
+     "sourceCut": "master_209"
+    },
+    "run-point": {
+     "src": "assets/patrol-squad/officer-focus/poses/officer-focus-run-point.png",
+     "display": "assets/patrol-squad/officer-focus/poses/officer-focus-run-point@2x.webp",
+     "w": 97,
+     "h": 116,
+     "heightFactor": 0.76,
+     "family": "m",
+     "sourceCut": "master_212"
+    }
+   },
+   "expressions": {
+    "neutral": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-neutral.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-neutral@2x.webp",
+     "sourceCut": "focus_007"
+    },
+    "smile": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-smile.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-smile@2x.webp",
+     "sourceCut": "focus_009"
+    },
+    "open-smile": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-open-smile.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-open-smile@2x.webp",
+     "sourceCut": "focus_008"
+    },
+    "grin": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-grin.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-grin@2x.webp",
+     "sourceCut": "focus_011"
+    },
+    "happy": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-happy.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-happy@2x.webp",
+     "sourceCut": "focus_010"
+    },
+    "soft": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-soft.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-soft@2x.webp",
+     "sourceCut": "focus_012"
+    },
+    "portrait": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-portrait.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-portrait@2x.webp",
+     "sourceCut": "focus_006"
+    },
+    "portrait-ponytail": {
+     "src": "assets/patrol-squad/officer-focus/expressions/officer-focus-portrait-ponytail.png",
+     "display": "assets/patrol-squad/officer-focus/expressions/officer-focus-portrait-ponytail@2x.webp",
+     "sourceCut": "focus_013"
+    }
+   },
+   "accessories": {
+    "binoculars": {
+     "src": "assets/patrol-squad/officer-focus/accessories/officer-focus-binoculars.png",
+     "display": "assets/patrol-squad/officer-focus/accessories/officer-focus-binoculars@2x.webp",
+     "sourceCut": "master_229"
+    },
+    "binoculars-b": {
+     "src": "assets/patrol-squad/officer-focus/accessories/officer-focus-binoculars-b.png",
+     "display": "assets/patrol-squad/officer-focus/accessories/officer-focus-binoculars-b@2x.webp",
+     "sourceCut": "master_234"
+    },
+    "clipboard": {
+     "src": "assets/patrol-squad/officer-focus/accessories/officer-focus-clipboard.png",
+     "display": "assets/patrol-squad/officer-focus/accessories/officer-focus-clipboard@2x.webp",
+     "sourceCut": "focus_033"
+    },
+    "clipboard-small": {
+     "src": "assets/patrol-squad/officer-focus/accessories/officer-focus-clipboard-small.png",
+     "display": "assets/patrol-squad/officer-focus/accessories/officer-focus-clipboard-small@2x.webp",
+     "sourceCut": "focus_003"
+    }
+   },
+   "rig": {
+    "cap": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-cap.png",
+     "w": 63,
+     "h": 45,
+     "sourceCut": "master_214"
+    },
+    "hair": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-hair.png",
+     "w": 59,
+     "h": 77,
+     "sourceCut": "focus_016"
+    },
+    "ponytail": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-ponytail.png",
+     "w": 44,
+     "h": 46,
+     "sourceCut": "master_216"
+    },
+    "torso": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-torso.png",
+     "w": 51,
+     "h": 56,
+     "sourceCut": "focus_015"
+    },
+    "vest": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-vest.png",
+     "w": 34,
+     "h": 45,
+     "sourceCut": "focus_014"
+    },
+    "arm-a": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-arm-a.png",
+     "w": 25,
+     "h": 59,
+     "sourceCut": "focus_018"
+    },
+    "sleeve": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-sleeve.png",
+     "w": 26,
+     "h": 46,
+     "sourceCut": "focus_017"
+    },
+    "arm-b": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-arm-b.png",
+     "w": 31,
+     "h": 42,
+     "sourceCut": "master_218"
+    },
+    "arm-c": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-arm-c.png",
+     "w": 29,
+     "h": 40,
+     "sourceCut": "master_219"
+    },
+    "arm-d": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-arm-d.png",
+     "w": 22,
+     "h": 52,
+     "sourceCut": "master_220"
+    },
+    "arm-e": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-arm-e.png",
+     "w": 25,
+     "h": 49,
+     "sourceCut": "master_221"
+    },
+    "arm-f": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-arm-f.png",
+     "w": 27,
+     "h": 48,
+     "sourceCut": "master_222"
+    },
+    "leg-a": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-a.png",
+     "w": 31,
+     "h": 64,
+     "sourceCut": "focus_032"
+    },
+    "leg-b": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-b.png",
+     "w": 25,
+     "h": 63,
+     "sourceCut": "focus_034"
+    },
+    "leg-c": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-c.png",
+     "w": 41,
+     "h": 62,
+     "sourceCut": "focus_035"
+    },
+    "leg-d": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-d.png",
+     "w": 37,
+     "h": 57,
+     "sourceCut": "focus_036"
+    },
+    "leg-e": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-e.png",
+     "w": 24,
+     "h": 54,
+     "sourceCut": "focus_037"
+    },
+    "leg-f": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-f.png",
+     "w": 37,
+     "h": 50,
+     "sourceCut": "master_230"
+    },
+    "leg-g": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-g.png",
+     "w": 25,
+     "h": 52,
+     "sourceCut": "master_231"
+    },
+    "leg-h": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-h.png",
+     "w": 32,
+     "h": 54,
+     "sourceCut": "master_232"
+    },
+    "leg-i": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-leg-i.png",
+     "w": 30,
+     "h": 49,
+     "sourceCut": "master_233"
+    },
+    "boot-a": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-boot-a.png",
+     "w": 28,
+     "h": 51,
+     "sourceCut": "focus_038"
+    },
+    "boot-b": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-boot-b.png",
+     "w": 32,
+     "h": 44,
+     "sourceCut": "focus_039"
+    },
+    "hand-a": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-hand-a.png",
+     "w": 28,
+     "h": 28,
+     "sourceCut": "focus_020"
+    },
+    "hand-b": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-hand-b.png",
+     "w": 25,
+     "h": 21,
+     "sourceCut": "master_224"
+    },
+    "hand-c": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-hand-c.png",
+     "w": 23,
+     "h": 25,
+     "sourceCut": "master_225"
+    },
+    "hand-d": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-hand-d.png",
+     "w": 23,
+     "h": 24,
+     "sourceCut": "master_226"
+    },
+    "hand-e": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-hand-e.png",
+     "w": 25,
+     "h": 28,
+     "sourceCut": "master_227"
+    },
+    "hand-f": {
+     "src": "assets/patrol-squad/officer-focus/rig/officer-focus-hand-f.png",
+     "w": 23,
+     "h": 40,
+     "sourceCut": "master_228"
+    }
+   },
+   "animationMethod": {
+    "fullBody": "pose swapping (cross-fade between supplied full-body poses)",
+    "head": "independent expression-head layer (comm badge): talk cycles, blinks, expression changes",
+    "props": "independent accessory layer with its own pivot animation",
+    "rig": "body-part sprites extracted and documented; not assembled into a skeleton (see limitations)"
+   }
+  }
+ },
+ "runtimeFiles": [
+  "assets/patrol-squad/captain-calm/accessories/captain-calm-compass@2x.webp",
+  "assets/patrol-squad/captain-calm/expressions/captain-calm-eyes-closed@2x.webp",
+  "assets/patrol-squad/captain-calm/expressions/captain-calm-gentle@2x.webp",
+  "assets/patrol-squad/captain-calm/expressions/captain-calm-happy@2x.webp",
+  "assets/patrol-squad/captain-calm/expressions/captain-calm-portrait-glance@2x.webp",
+  "assets/patrol-squad/captain-calm/expressions/captain-calm-smile@2x.webp",
+  "assets/patrol-squad/captain-calm/expressions/captain-calm-soft@2x.webp",
+  "assets/patrol-squad/captain-calm/poses/captain-calm-breathing@2x.webp",
+  "assets/patrol-squad/captain-calm/poses/captain-calm-celebrate@2x.webp",
+  "assets/patrol-squad/captain-calm/poses/captain-calm-crouch-ready@2x.webp",
+  "assets/patrol-squad/captain-calm/poses/captain-calm-idle@2x.webp",
+  "assets/patrol-squad/captain-calm/poses/captain-calm-meditate@2x.webp",
+  "assets/patrol-squad/captain-calm/poses/captain-calm-open-palms@2x.webp",
+  "assets/patrol-squad/coach-control/accessories/coach-control-clipboard@2x.webp",
+  "assets/patrol-squad/coach-control/accessories/coach-control-whistle@2x.webp",
+  "assets/patrol-squad/coach-control/expressions/coach-control-calm-smile@2x.webp",
+  "assets/patrol-squad/coach-control/expressions/coach-control-grin@2x.webp",
+  "assets/patrol-squad/coach-control/expressions/coach-control-laugh@2x.webp",
+  "assets/patrol-squad/coach-control/expressions/coach-control-skeptical@2x.webp",
+  "assets/patrol-squad/coach-control/expressions/coach-control-smile@2x.webp",
+  "assets/patrol-squad/coach-control/expressions/coach-control-talk-wide@2x.webp",
+  "assets/patrol-squad/coach-control/expressions/coach-control-talk@2x.webp",
+  "assets/patrol-squad/coach-control/poses/coach-control-cheer@2x.webp",
+  "assets/patrol-squad/coach-control/poses/coach-control-explain@2x.webp",
+  "assets/patrol-squad/coach-control/poses/coach-control-point@2x.webp",
+  "assets/patrol-squad/coach-control/poses/coach-control-thinking@2x.webp",
+  "assets/patrol-squad/coach-control/poses/coach-control-thumbs-up@2x.webp",
+  "assets/patrol-squad/coach-control/poses/coach-control-wave@2x.webp",
+  "assets/patrol-squad/commander-flex/accessories/commander-flex-map@2x.webp",
+  "assets/patrol-squad/commander-flex/expressions/commander-flex-excited@2x.webp",
+  "assets/patrol-squad/commander-flex/expressions/commander-flex-grin@2x.webp",
+  "assets/patrol-squad/commander-flex/expressions/commander-flex-laugh@2x.webp",
+  "assets/patrol-squad/commander-flex/expressions/commander-flex-neutral@2x.webp",
+  "assets/patrol-squad/commander-flex/expressions/commander-flex-open-grin@2x.webp",
+  "assets/patrol-squad/commander-flex/expressions/commander-flex-portrait@2x.webp",
+  "assets/patrol-squad/commander-flex/expressions/commander-flex-smile@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-celebrate@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-change-direction@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-idle@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-point@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-power-stance@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-ready@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-recovery-bounce@2x.webp",
+  "assets/patrol-squad/commander-flex/poses/commander-flex-thumbs-up-map@2x.webp",
+  "assets/patrol-squad/detective-think/accessories/detective-think-magnifier@2x.webp",
+  "assets/patrol-squad/detective-think/accessories/detective-think-notebook@2x.webp",
+  "assets/patrol-squad/detective-think/expressions/detective-think-cheerful@2x.webp",
+  "assets/patrol-squad/detective-think/expressions/detective-think-curious@2x.webp",
+  "assets/patrol-squad/detective-think/expressions/detective-think-gentle@2x.webp",
+  "assets/patrol-squad/detective-think/expressions/detective-think-happy@2x.webp",
+  "assets/patrol-squad/detective-think/expressions/detective-think-skeptical@2x.webp",
+  "assets/patrol-squad/detective-think/expressions/detective-think-smile@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-discover@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-explain-book@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-idea@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-inspect@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-investigate@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-magnifier@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-notebook@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-thinking@2x.webp",
+  "assets/patrol-squad/detective-think/poses/detective-think-wave@2x.webp",
+  "assets/patrol-squad/officer-focus/accessories/officer-focus-binoculars@2x.webp",
+  "assets/patrol-squad/officer-focus/accessories/officer-focus-clipboard@2x.webp",
+  "assets/patrol-squad/officer-focus/expressions/officer-focus-grin@2x.webp",
+  "assets/patrol-squad/officer-focus/expressions/officer-focus-happy@2x.webp",
+  "assets/patrol-squad/officer-focus/expressions/officer-focus-neutral@2x.webp",
+  "assets/patrol-squad/officer-focus/expressions/officer-focus-open-smile@2x.webp",
+  "assets/patrol-squad/officer-focus/expressions/officer-focus-portrait@2x.webp",
+  "assets/patrol-squad/officer-focus/expressions/officer-focus-smile@2x.webp",
+  "assets/patrol-squad/officer-focus/expressions/officer-focus-soft@2x.webp",
+  "assets/patrol-squad/officer-focus/poses/officer-focus-binoculars-ready@2x.webp",
+  "assets/patrol-squad/officer-focus/poses/officer-focus-binoculars@2x.webp",
+  "assets/patrol-squad/officer-focus/poses/officer-focus-point-clipboard@2x.webp",
+  "assets/patrol-squad/officer-focus/poses/officer-focus-point-up@2x.webp",
+  "assets/patrol-squad/officer-focus/poses/officer-focus-run-point@2x.webp",
+  "assets/patrol-squad/sergeant-pause/accessories/sergeant-pause-stop-paddle@2x.webp",
+  "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-grin@2x.webp",
+  "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-neutral@2x.webp",
+  "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-smile@2x.webp",
+  "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-squint@2x.webp",
+  "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-talk@2x.webp",
+  "assets/patrol-squad/sergeant-pause/expressions/sergeant-pause-wink@2x.webp",
+  "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-alert@2x.webp",
+  "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-approve-flex@2x.webp",
+  "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-idle@2x.webp",
+  "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-lookout@2x.webp",
+  "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-ready@2x.webp",
+  "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-stop-hand@2x.webp",
+  "assets/patrol-squad/sergeant-pause/poses/sergeant-pause-stop-sign@2x.webp"
+ ],
+ "rejectedCuts": {
+  "master_000": "Coach row pose wearing a blue cap — off-model (Coach's identity is the headset, no cap)",
+  "master_004": "Coach row pose wearing a blue cap — off-model",
+  "master_006": "Coach row pose wearing a blue cap — off-model",
+  "master_009": "Coach row pose with cap and megaphone — off-model",
+  "master_008": "Coach row pose drawn as a girl with a ponytail — not Coach Control",
+  "coach_small_000": "Duplicate of coach_000 (identical cut)",
+  "coach_small_001": "Duplicate of coach_001 with feet cropped",
+  "calm_b_*": "Sheet calm_b is pixel-identical to calm_a; calm_a used",
+  "master_045": "Lower-resolution variant of Captain Calm standing pose; calm_a_001 used",
+  "master_053": "Captain Calm open-palms pose cropped at the knees on the master sheet; calm_a_002 (complete) used",
+  "master_055": "Captain Calm pose carries a stray fragment from a neighbouring sprite",
+  "pause_000": "Neighbouring sprite fragment attached at the left edge; clean master_082 used",
+  "pause_001": "Clipped by the sheet edge and carries fragments of the row below",
+  "master_088": "Lower-resolution duplicate of the pointing pose; pause_003 used",
+  "master_165": "Detective Think leg merged with a pair of binoculars; cannot be separated cleanly",
+  "master_215": "Officer Focus hair clipped by the sheet edge; focus_016 used",
+  "master_237": "Officer Focus arm clipped by the sheet edge",
+  "focus_004": "Officer Focus kneeling pose is sliced off at the knees on the per-character sheet; the complete master_204 kneel is used",
+  "coach_035 (as whistle)": "Gold lanyard ring, not a whistle; kept as 'lanyard-ring'. The whistle prop is cut from the bottom of coach_016 (lanyard whistle, sharpest copy)",
+  "master_130 (board/state use)": "Detective Think drawn with a monocle instead of her round glasses; extracted but never shown",
+  "master_145 (state use)": "Detective Think face drawn without her glasses; extracted but never shown",
+  "master_089..098": "Sergeant Pause master heads mix capped and uncapped versions with a lighter skin tone; consistent capped per-character heads used",
+  "master_010..020": "Several Coach master heads drop the headset; per-character heads used (master_013 kept for its unique skeptical brow)"
+ },
+ "sourceSheets": {
+  "master": "Self-Control_Patrol_Sprite_Sheet_sheet_sheet.png (2088x1680, RGBA)",
+  "coach": "Cartoon_Team_Character_Sprite_Sheet_crop_1_3_509x510_sheet.png (3168x168, RGBA)",
+  "coach_small": "Cartoon_Team_Character_Sprite_Sheet_crop_8_4_493x248_sheet.png (176x168, RGBA)",
+  "calm_a": "Cartoon_Team_Character_Sprite_Sheet_crop_520_0_504x515_sheet_sheet.png (4920x224, RGBA)",
+  "calm_b": "Cartoon_Team_Character_Sprite_Sheet_crop_520_0_504x515_sheet_sheet_1.png (4704x160, RGBA; pixel-identical sprites to calm_a)",
+  "pause": "Cartoon_Team_Character_Sprite_Sheet_crop_0_515_509x542_sheet.png (5760x176, RGBA)",
+  "flex": "Cartoon_Team_Character_Sprite_Sheet_crop_2_1044_508x492_sheet.png (6336x280, RGBA)",
+  "focus": "Cartoon_Team_Character_Sprite_Sheet_crop_514_1055_507x475_sheet.png (4480x192, RGBA)"
+ }
+}

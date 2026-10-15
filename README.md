@@ -106,3 +106,30 @@ This checkpoint is intended as the safe rollback baseline before Task 11.
 
 ## Task 14 - Unified Reduced Motion
 Completed system-wide reduced-motion pass. See `TASK14_STATUS.md`.
+
+
+## v5 Patrol Squad character integration
+
+The six official Patrol Squad mascots now appear using the supplied sprite artwork: Coach Control, Captain Calm, Sergeant Pause, Detective Think, Commander Flex and Officer Focus.
+
+- **On the board:** each mascot stands on clear board background near its themed area, with subtle idle animation. They never cover spaces, printed text, pawns or controls, and they never intercept touch.
+- **Close-ups:** at key moments a larger animated close-up appears with a short supportive line. A speech bubble sits over the board's title logo, and the character card stands in the open area below it. Neither ever covers a playable space. Examples: a STOP sign for stop-and-think cards, Detective Think when a question appears, Commander Flex on a retry, Captain Calm after a difficult answer, Officer Focus when chips are earned.
+- **Elsewhere:** Coach Control announces turns in the turn spotlight; Detective Think explains alternatives in Teaching Ideas; the whole squad celebrates in the finale.
+- **Settings:** Teacher → Settings has switches for the board squad, the close-ups and optional character voice lines. Voice lines are off by default and use the device voice.
+- **Rules unchanged:** reactions follow Calmer Animations and the device's reduced-motion preference, and pause with the game. They change no rules, scores, records or save data.
+
+Every sprite uses the best available cut: neighbour fragments, haze and baked edge glow are removed, and off-model or cropped copies are never shown. The integration report, best-cut audit, event table, test results and limitations are in `PATROL_SQUAD_STATUS.md`. The asset manifest is `assets/patrol-squad/manifest.json`.
+
+Four pre-existing issues were fixed during testing:
+
+1. The opening's START MISSION button did nothing.
+2. The intro ignored Calmer Animations.
+3. **Next player** did not appear after the last multiple-choice answer.
+4. Audio started before any user gesture.
+
+### Added files
+
+- `patrol-squad.js` and `patrol-squad.css`: the mascot engine and its styles.
+- `data/patrol-squad.js`: the runtime manifest.
+- `assets/patrol-squad/`: the extracted sprites, `@2x.webp` display copies and `manifest.json`.
+- `tools/patrol-squad-pipeline/`: optional extraction scripts. They are not needed to run the game.
